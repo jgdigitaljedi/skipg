@@ -1,0 +1,118 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$md-brsblue: (
+	50 : #e2e5e8,
+	100 : #b6bdc6,
+	200 : #8691a0,
+	300 : #556579,
+	400 : #30445d,
+	500 : #0c2340,
+	600 : #0a1f3a,
+	700 : #081a32,
+	800 : #06152a,
+	900 : #030c1c,
+	A100 : #5a83ff,
+	A200 : #275dff,
+	A400 : #003df3,
+	A700 : #0036da,
+	contrast:
+		(
+			50 : #000000,
+			100 : #000000,
+			200 : #000000,
+			300 : #ffffff,
+			400 : #ffffff,
+			500 : #ffffff,
+			600 : #ffffff,
+			700 : #ffffff,
+			800 : #ffffff,
+			900 : #ffffff,
+			A100 : #000000,
+			A200 : #ffffff,
+			A400 : #ffffff,
+			A700 : #ffffff
+		)
+);
+
+$md-brwhite: (
+	50 : #fefefe,
+	100 : #fefefe,
+	200 : #fdfdfd,
+	300 : #fcfcfc,
+	400 : #fbfbfb,
+	500 : #fafafa,
+	600 : #f9f9f9,
+	700 : #f9f9f9,
+	800 : #f8f8f8,
+	900 : #f6f6f6,
+	A100 : #ffffff,
+	A200 : #ffffff,
+	A400 : #ffffff,
+	A700 : #ffffff,
+	contrast:
+		(
+			50 : #000000,
+			100 : #000000,
+			200 : #000000,
+			300 : #000000,
+			400 : #000000,
+			500 : #000000,
+			600 : #000000,
+			700 : #000000,
+			800 : #000000,
+			900 : #000000,
+			A100 : #000000,
+			A200 : #000000,
+			A400 : #000000,
+			A700 : #000000
+		)
+);
+
+$md-brsred: (
+	50 : #f8e2e6,
+	100 : #efb7c0,
+	200 : #e48897,
+	300 : #d9586d,
+	400 : #d0344d,
+	500 : #c8102e,
+	600 : #c20e29,
+	700 : #bb0c23,
+	800 : #b4091d,
+	900 : #a70512,
+	A100 : #ffd2d4,
+	A200 : #ff9fa3,
+	A400 : #ff6c73,
+	A700 : #ff535a,
+	contrast:
+		(
+			50 : #000000,
+			100 : #000000,
+			200 : #000000,
+			300 : #000000,
+			400 : #ffffff,
+			500 : #ffffff,
+			600 : #ffffff,
+			700 : #ffffff,
+			800 : #ffffff,
+			900 : #ffffff,
+			A100 : #000000,
+			A200 : #000000,
+			A400 : #000000,
+			A700 : #000000
+		)
+);
+
+$app-primary: mat-palette($md-brsblue);
+$app-accent: mat-palette($md-brwhite, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$app-warn: mat-palette($md-brsred);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($app-theme);
