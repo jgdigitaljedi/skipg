@@ -1,0 +1,12 @@
+@import '../../../styles/_variables.scss';
+.nav-buttons {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	button {
+		margin: auto 1em;
+		&.active {
+			color: $red-sox-red;
+		}
+	}
+}

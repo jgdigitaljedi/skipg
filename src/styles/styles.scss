@@ -1,3 +1,7 @@
 @import './_variables.scss';
-@import './_global.scss';
 @import './_materialTheme.scss';
+@import './mixins/_shadow.scss';
+
+body {
+	margin: 0;
+}

@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
 	declarations: [ AppComponent, routingComponents ],
-	imports: [ AppRoutingModule, BrowserModule, SharedModule ],
+	imports: [ AppRoutingModule, BrowserModule, SharedModule, BrowserAnimationsModule ],
 	providers: [],
 	bootstrap: [ AppComponent ]
 })

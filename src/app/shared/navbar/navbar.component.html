@@ -1,3 +1,20 @@
-<p>
-  navbar works!
-</p>
+<mat-toolbar color="primary">
+  <span>Skip Gauthier</span>
+  <div class="nav-buttons">
+    <button mat-button [class.active]="activeRoute === '/home'" (click)="navNext('/home')">
+      Home
+    </button>
+    <button mat-button [class.active]="activeRoute === '/slideshow'" (click)="navNext('/slideshow')">
+      Slideshow
+    </button>
+    <button mat-button [class.active]="activeRoute === '/upload'" (click)="navNext('/upload')">
+      Upload Photos
+    </button>
+    <button mat-button [class.active]="activeRoute === '/view'" (click)="navNext('/view')">
+      View Photos
+    </button>
+    <button mat-button [class.active]="activeRoute === '/other'" (click)="navNext('/other')">
+      Other
+    </button>
+  </div>
+</mat-toolbar>

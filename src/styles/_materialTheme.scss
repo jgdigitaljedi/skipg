@@ -35,7 +35,7 @@ $md-brsblue: (
 		)
 );
 
-$md-brwhite: (
+$md-brswhite: (
 	50 : #fefefe,
 	100 : #fefefe,
 	200 : #fdfdfd,
@@ -104,7 +104,7 @@ $md-brsred: (
 );
 
 $app-primary: mat-palette($md-brsblue);
-$app-accent: mat-palette($md-brwhite, A200, A100, A400);
+$app-accent: mat-palette($md-brswhite, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $app-warn: mat-palette($md-brsred);
