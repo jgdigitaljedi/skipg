@@ -25,3 +25,9 @@
 - other
   - have obituary PDF
   - have any links to obit, Owens & Brumley, etc
+
+#### Step by step
+- create overall style language
+- remove 'Other' section and put those contents in home
+- create mobile nav solution and bring in flex-layout to help with mobile stuff
+- decide on image hosting solution and integrate (leaning on Cloudinary but need to research)

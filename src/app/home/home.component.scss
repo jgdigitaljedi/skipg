@@ -6,7 +6,12 @@
 		max-width: 12%;
 	}
 	.letting-them-know {
-		max-width: 50%;
+		&.full {
+			max-width: 50%;
+		}
+		&.mobile {
+			max-width: 95%;
+		}
 		.section-title {
 			font-weight: bold;
 		}

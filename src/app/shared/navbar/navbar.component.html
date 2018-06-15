@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar fxHide.lt-md="true" fxShow.gt-sm="true" fxFlex="100" fxLayout="row" color="primary">
   <span>Skip Gauthier</span>
   <div class="nav-buttons">
     <button mat-button [class.active]="activeRoute === '/home'" (click)="navNext('/home')">
@@ -13,8 +13,17 @@
     <button mat-button [class.active]="activeRoute === '/view'" (click)="navNext('/view')">
       View Photos
     </button>
-    <button mat-button [class.active]="activeRoute === '/other'" (click)="navNext('/other')">
-      Other
-    </button>
   </div>
+</mat-toolbar>
+
+<mat-toolbar fxHide.gt-sm="true" fxShow.lt-md="true" color="primary" fxFlex="100" fxLayout="row">
+  <button mat-button class="nav-menu-toggle" [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [class.active]="activeRoute === '/home'" (click)="navNext('/home')">Home</button>
+    <button mat-menu-item [class.active]="activeRoute === '/slideshow'" (click)="navNext('/slideshow')">Slideshow</button>
+    <button mat-menu-item [class.active]="activeRoute === '/upload'" (click)="navNext('/upload')">Upload Photos</button>
+    <button mat-menu-item [class.active]="activeRoute === '/view'" (click)="navNext('/view')">View Photos</button>
+  </mat-menu>
 </mat-toolbar>
