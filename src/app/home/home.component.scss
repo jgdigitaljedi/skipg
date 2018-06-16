@@ -3,7 +3,10 @@
 	flex-direction: column;
 	align-items: center;
 	img {
-		max-width: 12%;
+		max-width: 20%;
+		&.mobile-photo {
+			max-width: 55%;
+		}
 	}
 	.letting-them-know {
 		&.full {
