@@ -47,13 +47,13 @@ export class UploaderComponent implements OnInit {
 			let tags = 'skipg';
 			if (this.title) {
 				form.append('context', `photo=${this.title}`);
-				tags = `myphotoalbum,${this.title}`;
+				tags = `skip,${this.title}`;
 			}
 			// Upload to a custom folder
 			// Note that by default, when uploading via the API, folders are not automatically created in your Media Library.
 			// In order to automatically create the folders based on the API requests,
 			// please go to your account upload settings and set the 'Auto-create folders' option to enabled.
-			form.append('folder', 'angular_sample');
+			form.append('folder', 'skipg');
 			// Add custom tags
 			form.append('tags', tags);
 			// Add file to upload

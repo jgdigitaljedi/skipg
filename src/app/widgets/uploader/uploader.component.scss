@@ -1,12 +1,17 @@
-#posterframe {
-	/*position: absolute;*/
-	/*right: 10px;*/
-	/*top: 10px;*/
-	position: relative;
+@import '../../../styles/_variables.scss';
+
+mat-card {
+	background-color: $flat-white;
+	&.card-desktop {
+		width: 65%;
+	}
+	&.card-mobile {
+		width: 95%;
+	}
 }
 
 h1 {
-	color: #0e2953;
+	color: $primary;
 	font-size: 18px;
 }
 
@@ -21,10 +26,10 @@ p {
 	font-size: 14px;
 	line-height: 18px;
 }
-#logo {
-	height: 51px;
-	width: 241px;
-}
+// #logo {
+// 	height: 51px;
+// 	width: 241px;
+// }
 a {
 	color: #0b63b6;
 }
@@ -151,10 +156,10 @@ form .error {
 	border: 4px dashed #ccc;
 }
 #direct_upload.dragover {
-	border-color: #0c0;
+	border-color: $success;
 }
 #direct_upload.dragover-err {
-	border-color: #c00;
+	border-color: $warn;
 }
 
 .upload_details {
@@ -170,28 +175,28 @@ form .error {
 }
 
 .upload_button {
-	display: inline-block;
-	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	font-weight: bold;
 	font-size: 14px;
-	background-color: rgb(15, 97, 172);
-	color: #fff;
+	background-color: $primary;
+	color: $flat-white;
 	padding: 5px 0;
-	border: 1px solid #000;
+	border: 1px solid $flat-black;
 	border-radius: 4px;
 	width: 100px;
 	height: 18px;
 	text-decoration: none;
 	text-align: center;
 	cursor: pointer;
-}
-
-.upload_button_holder .upload_button {
-	display: block;
+	mat-icon {
+		margin-right: .5em;
+	}
 }
 
 .upload_button:hover {
-	background-color: rgb(17, 133, 240);
+	background-color: lighten($primary, 20%);
 }
 .upload_button_holder .cloudinary_fileupload {
 	opacity: 0;
@@ -213,7 +218,7 @@ form .error {
 }
 .progress-bar .progress {
 	height: 4px;
-	background-color: #ff0000;
+	background-color: $primary;
 	width: 0;
 }
 .preview img,
