@@ -10,9 +10,12 @@ import { Photo } from '../services/photo';
   styleUrls: ['./view.component.scss']
 })
 export class ViewComponent implements OnInit {
-  private photos;
+  photos;
+  gridColumns;
 
-  constructor(private _cloud: CloudinaryService) { }
+  constructor(private _cloud: CloudinaryService) {
+    this.gridColumns = Math.floor(window.innerWidth / 320);
+  }
 
   ngOnInit() {
     this._cloud.getPhotos()

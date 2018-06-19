@@ -1,0 +1,25 @@
+.photos-view {
+  padding: 1em;
+
+  .photo-grid {
+
+    .photo-grid--tile {
+
+      mat-card {
+        width: 100%;
+        padding: .5em;
+
+        .photo-grid--tile--image-wrapper {
+
+          .photo-grid--tile--image, img {
+            max-width: 100%;
+          }
+        }
+
+        .photo-grid--tile---actions {
+
+        }
+      }
+    }
+  }
+}

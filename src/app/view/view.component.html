@@ -1,3 +1,17 @@
 <section class="photos-view">
-
+  <!-- <mat-toolbar>Some kind of toolbar here</mat-toolbar> -->
+  <mat-grid-list [cols]="gridColumns" rowHeight="2:1" class="photo-grid" *ngIf="photos && photos.length">
+    <mat-grid-tile *ngFor="let photo of photos" class="photo-grid--tile">
+      <mat-card>
+        <div class="photo-grid--tile--image-wrapper">
+          <cl-image [public-id]="photo.public_id" class="photo-grid--tile--image">
+            <cl-transformation width="300" crop="scale"></cl-transformation>
+          </cl-image>
+        </div>
+        <div class="photo-grid--tile--actions">
+          blah
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 </section>
