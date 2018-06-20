@@ -1,7 +1,7 @@
-@import '../../styles/_variables.scss';
+@import '../../styles/_variables';
 .photos-view {
-	padding: 1em;
 	background-color: $flat-white;
+	padding: 1em;
 	text-align: center;
 	.photos-masonry-wrapper {
 		.masonry-item {

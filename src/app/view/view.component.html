@@ -1,4 +1,4 @@
-<section class="photos-view">
+<section class="photos-view" infiniteScroll (scrolled)="getMorePhotos()">
   <!-- <mat-toolbar>Some kind of toolbar here</mat-toolbar> -->
   <div class="photos-masonry-wrapper">
     <ngx-masonry class="masonry-wrapper" [options]="options" [useImagesLoaded]="true">
@@ -8,8 +8,7 @@
             <cl-transformation width="300" crop="scale"></cl-transformation>
           </cl-image>
         </mat-card>
-        </ngxMasonryItem>
-      </ngx-masonry>
+      </ngxMasonryItem>
+    </ngx-masonry>
   </div>
 </section>
-

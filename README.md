@@ -4,6 +4,11 @@ This is the code base for a small memorial site I am making for my grandfother w
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
+## Main Dependencies
+- [Angular Material](https://material.angular.io/)
+- [ngx-masonry](https://github.com/gethinoakes/ngx-masonry)
+- [ngx-infinite-scroll](https://github.com/orizens/ngx-infinite-scroll)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
