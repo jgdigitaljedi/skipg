@@ -1,5 +1,5 @@
 <section class="photos-view" infiniteScroll (scrolled)="getMorePhotos()">
-  <!-- <mat-toolbar>Some kind of toolbar here</mat-toolbar> -->
+  <mat-toolbar [color]="'warn'">Sorting, download all, etc will go here</mat-toolbar>
   <div class="photos-masonry-wrapper">
     <ngx-masonry class="masonry-wrapper" [options]="options" [useImagesLoaded]="true">
       <ngxMasonryItem class="masonry-item" *ngFor="let photo of photos">
