@@ -1,34 +1,59 @@
 <mat-horizontal-stepper [linear]="true" #stepper>
-  <mat-step>
-    <form>
+  <mat-step [stepControl]="firstForm" class="stepper">
+    <form [formGroup]="firstForm" class="stepper-form">
       <ng-template matStepLabel>DISCLAIMER!</ng-template>
-      <div class="upload-disclaimer">I ask that you only upload photos of Skip/Maurice/Dad/Pop/Pere Pere, or whatever you called him. This is not your Facebook or Instagram page 
-        and if you want to post pictures of yourself somewhere then that is the place to do it. This site is only for photos in which Skip is pictured. 
-        Don't get me wrong, the more people in the picture the merrier. Just know that I will delete any photos that do not have Skip in them.
-      </div>
-      <mat-form-field>
-        <div>To keep track of who uploaded which picture, enter you name:</div>
-        <input matInput placeholder="Name" formControlName="firstCtrl">
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperNext>Next</button>
+      <div class="stepper-contents" ngClass.gt-sm="half-width" ngClass.lt-md="full-width">
+        <div class="upload-disclaimer">I ask that you only upload photos of Skip/Maurice/Dad/Pop/Pere Pere, or whatever you called him. This is not your
+          Facebook or Instagram page and if you want to post pictures of yourself somewhere then that is the place to do
+          it. This site is only for photos in which Skip is pictured. Don't get me wrong, the more people in the picture
+          the merrier. Just know that I will delete any photos that do not have Skip in them.
+        </div>
+        <div class="name-text">To keep track of who uploaded which picture, enter you name:</div>
+        <mat-form-field>
+          <input matInput placeholder="Name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext class="control-btn blue-red-fade">
+            Next Step
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
+        </div>
       </div>
     </form>
   </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Enter Family & Friends Password</ng-template>
-    <input matInput placeholder="Enter password">
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </div>
+  <mat-step [stepControl]="passForm" class="stepper">
+    <form [formGroup]="passForm" class="stepper-form">
+      <ng-template matStepLabel>Enter Family & Friends Password</ng-template>
+      <div class="stepper-contents" ngClass.gt-sm="half-width" ngClass.lt-md="full-width">
+        <div class="password-instructions">
+          Enter the password that is shared with family and friends. If you don't know this password and are family or a close friend
+          that has some photos to upload then ask Paul or Joey for the password. This is just a small step to deter any random
+          person from uploading whatever they want.
+        </div>
+        <mat-form-field>
+          <input matInput type="password" placeholder="Enter password" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious class="control-btn red-blue-fade">
+            <mat-icon>arrow_back</mat-icon>
+            Previous Step
+          </button>
+          <button mat-button matStepperNext class="control-btn blue-red-fade">
+            Next Step
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
+        </div>
+      </div>
+    </form>
   </mat-step>
   <mat-step>
     <ng-template matStepLabel>Upload Photos</ng-template>
     <app-uploader></app-uploader>
     <div>
-      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperPrevious class="control-btn">
+        <mat-icon>arrow_back</mat-icon>
+        Previous Step
+      </button>
     </div>
   </mat-step>
 </mat-horizontal-stepper>
-  

@@ -1,0 +1,33 @@
+@import '../../styles/_variables';
+.stepper {
+  width: 100%;;
+}
+.stepper-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.stepper-contents {
+  &.half-width {
+    max-width: 60%;
+  }
+  &.full-width {
+    max-width: 95%;
+  }
+}
+
+.upload-disclaimer, .password-instructions, .name-text {
+  margin-bottom: 1em;
+}
+
+.upload-disclaimer {
+  font-style: bold;
+}
+
+.control-btn {
+  background-color: $primary;
+  color: $flat-white;
+  border-radius: 5px;
+  MARGIN-RIGHT: .5EM;
+}

@@ -1,0 +1,20 @@
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+  background: linear-gradient(to right, $from 0%, $to $stop);
+  background-color: $from;
+}
+
+.blue-red-fade {
+  @include horizontal-gradient($primary, $warn);
+}
+
+.red-blue-fade {
+  @include horizontal-gradient($warn, $primary);
+}
+
+.red-fade {
+  @include horizontal-gradient(darken($warn, 30%), $warn);
+}
+
+.blue-fade {
+  @include horizontal-gradient(lighten($primary, 30%), $primary);
+}
