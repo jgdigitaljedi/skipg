@@ -37,9 +37,10 @@ import { SharedModule } from './shared/shared.module';
 // components
 import { AppComponent } from './app.component';
 import { UploaderComponent } from './widgets/uploader/uploader.component';
+import { ImageDialogComponent } from './widgets/image-dialog/image-dialog.component';
 
 @NgModule({
-  declarations: [AppComponent, routingComponents, UploaderComponent],
+  declarations: [AppComponent, ImageDialogComponent, routingComponents, UploaderComponent],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -63,6 +64,7 @@ import { UploaderComponent } from './widgets/uploader/uploader.component';
     SharedModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ImageDialogComponent]
 })
 export class AppModule { }

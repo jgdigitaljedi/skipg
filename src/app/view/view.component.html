@@ -3,18 +3,18 @@
   <div class="photos-masonry-wrapper">
     <ngx-masonry class="masonry-wrapper" [options]="options" [useImagesLoaded]="true">
       <ngxMasonryItem class="masonry-item" *ngFor="let photo of photos">
-        <mat-card>
+        <mat-card (click)="openImageDialog(photo)">
           <cl-image [public-id]="photo.public_id" class="photo-grid--tile--image">
             <cl-transformation width="300" crop="scale"></cl-transformation>
           </cl-image>
-          <div class="photo-tools">
+          <!-- <div class="photo-tools">
             <button mat-button class="icon-button">
               <mat-icon>fullscreen</mat-icon>
             </button>
             <button (click)="saveImage(photo)" mat-button class="icon-button">
               <mat-icon>save</mat-icon>
             </button>
-          </div>
+          </div> -->
         </mat-card>
       </ngxMasonryItem>
     </ngx-masonry>

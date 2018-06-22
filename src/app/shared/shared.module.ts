@@ -12,10 +12,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
-	imports: [ CommonModule, FlexLayoutModule, MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule ],
-	declarations: [ NavbarComponent ],
-	exports: [ NavbarComponent ]
+  imports: [CommonModule, FlexLayoutModule, MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, MatDialogModule],
+  declarations: [NavbarComponent],
+  exports: [NavbarComponent]
 })
-export class SharedModule {}
+export class SharedModule { }

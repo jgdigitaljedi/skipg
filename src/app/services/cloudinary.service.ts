@@ -21,4 +21,8 @@ export class CloudinaryService {
     console.log('url', url);
     return this.http.get(url).pipe(map((data: any) => data.resources));
   }
+
+  photoBaseUrl() {
+    return 'http://res.cloudinary.com/skipg-me/image/upload/v1529667001/';
+  }
 }
