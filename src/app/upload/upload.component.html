@@ -13,7 +13,7 @@
           <input matInput placeholder="Name" formControlName="firstCtrl" required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperNext class="control-btn blue-red-fade">
+          <button mat-button matStepperNext class="control-btn red-fade">
             Next Step
             <mat-icon>arrow_forward</mat-icon>
           </button>
@@ -30,15 +30,16 @@
           that has some photos to upload then ask Paul or Joey for the password. This is just a small step to deter any random
           person from uploading whatever they want.
         </div>
+        <div class="password-note">NOTE: The 'Next Step' button will remain disabled until you type the correct password.</div>
         <mat-form-field>
-          <input matInput type="password" placeholder="Enter password" formControlName="secondCtrl" required>
+          <input #passField matInput type="password" placeholder="Enter password" formControlName="secondCtrl" required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperPrevious class="control-btn red-blue-fade">
+          <button mat-button matStepperPrevious class="control-btn blue-fade">
             <mat-icon>arrow_back</mat-icon>
             Previous Step
           </button>
-          <button mat-button matStepperNext class="control-btn blue-red-fade">
+          <button mat-button matStepperNext class="control-btn red-fade" [disabled]="passField.value !== ffPass" [class.disabled-btn]="passField.value !== ffPass">
             Next Step
             <mat-icon>arrow_forward</mat-icon>
           </button>
@@ -49,8 +50,8 @@
   <mat-step>
     <ng-template matStepLabel>Upload Photos</ng-template>
     <app-uploader></app-uploader>
-    <div>
-      <button mat-button matStepperPrevious class="control-btn">
+    <div class="previous-wrapper">
+      <button mat-button matStepperPrevious class="control-btn blue-fade">
         <mat-icon>arrow_back</mat-icon>
         Previous Step
       </button>

@@ -7,14 +7,14 @@
         <div class="form_line">
           <div class="form_controls">
             <mat-form-field>
-              <input matInput type="text" placeholder="Title" class="form-control" #title (keyup.enter)="updateTitle(title.value)" (blur)="updateTitle(title.value)">
+              <input matInput type="text" placeholder="Tags" class="form-control" #title (keyup.enter)="updateTitle(title.value)" (blur)="updateTitle(title.value)">
             </mat-form-field>
           </div>
         </div>
         <div class="form_line">
           <div class="form_controls">
             <div class="upload_button_holder">
-              <label class="upload_button" for="fileupload">
+              <label class="upload_button red-blue-fade" for="fileupload">
                 <mat-icon>cloud_upload</mat-icon>
                 Upload Image
               </label>
@@ -32,7 +32,8 @@
         <div class="status">
           Uploading... {{response.progress}}%
           <div *ngIf="!response.status">In progress</div>
-          <div class="status-code" *ngIf="response.status">Upload completed with status code {{response.status}}</div>
+          <div class="status-code upload-success" *ngIf="response.status && response.status == 200">Upload Completed!</div>
+          <div class="status-code upload-failed" *ngIf="response.status != 200">ERROR! Upload failed!</div>
         </div>
         <div class="progress-bar">
           <mat-progress-bar mode="determinate" [value]="response.progress"></mat-progress-bar>

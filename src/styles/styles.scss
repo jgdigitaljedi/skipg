@@ -29,3 +29,9 @@ button,
 .title {
 	font-family: 'Merriweather', serif;
 }
+
+.disabled-btn {
+	background-color: $gray-4 !important;
+	color: $gray-2 !important;
+	background: none;
+}

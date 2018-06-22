@@ -1,15 +1,17 @@
 ## Skipg.me plans
 
 #### Technical/Infrastructure
-- integrate CloudFlare CDN for caching and maybe DNS
 - use Cloudinary for photo hosting
 - setup CI
 - make a responsive PWA
 - use nginx
+- use backend as a service to store photo details (just to prevent having to mess with backend hosting on VPS)
 
 #### Views
 - Home
   - need a landing page/no hard plans yet
+  - have obituary PDF
+  - have any links to obit, Owens & Brumley, etc
 - Slideshow
   - randomly generate slideshow using all available photos
   - maybe have music? (if so...Proud Mary, Dancing in the Street, I've Got You Babe)
@@ -22,9 +24,7 @@
   - have each photo show enlarged when clicked
   - have download button for each photo
   - have Download All button at top of page that downloads all photos in a zip file
-- other
-  - have obituary PDF
-  - have any links to obit, Owens & Brumley, etc
+
 
 #### Step by step
 - create overall style language

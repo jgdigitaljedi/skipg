@@ -1,33 +1,50 @@
 @import '../../styles/_variables';
 .stepper {
-  width: 100%;;
+	width: 100%;
 }
 .stepper-form {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }
 
 .stepper-contents {
-  &.half-width {
-    max-width: 60%;
-  }
-  &.full-width {
-    max-width: 95%;
-  }
+	&.half-width {
+		max-width: 60%;
+	}
+	&.full-width {
+		max-width: 95%;
+	}
 }
 
-.upload-disclaimer, .password-instructions, .name-text {
-  margin-bottom: 1em;
+.upload-disclaimer,
+.password-instructions,
+.name-text,
+.password-note {
+	margin-bottom: 1em;
+}
+
+.password-note {
+	font-weight: bold;
 }
 
 .upload-disclaimer {
-  font-style: bold;
+	font-style: bold;
 }
 
 .control-btn {
-  background-color: $primary;
-  color: $flat-white;
-  border-radius: 5px;
-  MARGIN-RIGHT: .5EM;
+	background-color: $primary;
+	color: $flat-white;
+	border-radius: 5px;
+	margin-right: .5em;
+}
+
+.previous-wrapper {
+	margin-top: 1em;
+}
+
+.uploader-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
