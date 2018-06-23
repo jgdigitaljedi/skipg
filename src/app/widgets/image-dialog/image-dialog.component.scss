@@ -1,0 +1,10 @@
+@import '../../../styles/_variables';
+.image-dialog-wrapper {
+	width: 100%;
+	::ng-deep .image-dialog--photo {
+		// width: auto;
+		// max-height: calc(100% - 50px);
+		// max-width: 80%;
+		// object-fit: cover;
+	}
+}

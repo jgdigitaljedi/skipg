@@ -16,7 +16,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgxMasonryModule } from 'ngx-masonry';
 
 export const cloudinary = {
-  Cloudinary: CloudinaryCore
+	Cloudinary: CloudinaryCore
 };
 export const config: CloudinaryConfiguration = cloudinaryConfiguration;
 
@@ -29,6 +29,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule } from '@angular/material/dialog';
 
 // modules
 import { AppRoutingModule, routingComponents } from './app.routing';
@@ -40,31 +41,32 @@ import { UploaderComponent } from './widgets/uploader/uploader.component';
 import { ImageDialogComponent } from './widgets/image-dialog/image-dialog.component';
 
 @NgModule({
-  declarations: [AppComponent, ImageDialogComponent, routingComponents, UploaderComponent],
-  imports: [
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    BrowserModule,
-    CloudinaryModule.forRoot(cloudinary, config),
-    FileUploadModule,
-    FlexLayoutModule,
-    FormsModule,
-    HttpClientModule,
-    InfiniteScrollModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-    MatProgressBarModule,
-    MatStepperModule,
-    MatToolbarModule,
-    NgxMasonryModule,
-    ReactiveFormsModule,
-    SharedModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [ImageDialogComponent]
+	declarations: [ AppComponent, ImageDialogComponent, routingComponents, UploaderComponent ],
+	imports: [
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		BrowserModule,
+		CloudinaryModule.forRoot(cloudinary, config),
+		FileUploadModule,
+		FlexLayoutModule,
+		FormsModule,
+		HttpClientModule,
+		InfiniteScrollModule,
+		MatButtonModule,
+		MatCardModule,
+		MatDialogModule,
+		MatFormFieldModule,
+		MatIconModule,
+		MatInputModule,
+		MatProgressBarModule,
+		MatStepperModule,
+		MatToolbarModule,
+		NgxMasonryModule,
+		ReactiveFormsModule,
+		SharedModule
+	],
+	providers: [],
+	bootstrap: [ AppComponent ],
+	entryComponents: [ ImageDialogComponent ]
 })
-export class AppModule { }
+export class AppModule {}
