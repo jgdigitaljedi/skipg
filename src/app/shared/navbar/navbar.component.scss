@@ -3,8 +3,16 @@
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
-	button {
+	.nav-btn {
+		padding: 0;
 		margin: auto 1em;
+		display: flex;
+		align-items: flex-start;
+		mat-icon {
+			font-size: 1.2em;
+			width: 1.2em;
+			height: 1.2em;
+		}
 		&.active {
 			color: $red-sox-red;
 		}

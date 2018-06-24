@@ -1,0 +1,25 @@
+.info-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	img {
+		max-width: 20%;
+		&.mobile-photo {
+			max-width: 55%;
+		}
+	}
+	.letting-them-know {
+		&.full {
+			max-width: 50%;
+		}
+		&.mobile {
+			max-width: 95%;
+		}
+		.section-title {
+			font-weight: bold;
+		}
+		ul {
+			margin: .2em;
+		}
+	}
+}

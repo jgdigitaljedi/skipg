@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-navbar',
@@ -9,9 +9,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class NavbarComponent implements OnInit {
 	@Input() activeRoute: string;
 
-	constructor(private _route: Router, private _activated: ActivatedRoute) {}
+	constructor(private _route: Router) {}
 
-	ngOnInit() {}
+	ngOnInit() {
+		this._route.events.subscribe((val) => {
+			this.activeRoute = val['url'];
+		});
+	}
 
 	navNext(which: string): void {
 		this.activeRoute = which;
