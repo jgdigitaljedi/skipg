@@ -13,52 +13,34 @@ mat-card {
 
 h1 {
 	color: $primary;
-	font-size: 18px;
+	// font-size: 18px;
 }
 
 h1.welcome {
-	margin-top: 25px;
+	margin-top: 2em;
 }
 h2 {
 	color: $gray-3;
-	font-size: 16px;
 }
-p {
-	font-size: 14px;
-	line-height: 18px;
-}
-// #logo {
-// 	height: 51px;
-// 	width: 241px;
-// }
 a {
 	color: $primary;
-}
-
-.manipulation-video {
-	margin: 10px 0;
-}
-
-.actions {
-	margin: 20px 0;
 }
 .upload_link {
 	color: #000;
 	border: 1px solid $gray-5;
 	background-color: $flat-white;
-	font-size: 18px;
-	padding: 5px 10px;
-	width: 250px;
-	margin: 10px 0 20px 0;
+	font-size: 1em;
+	padding: .5em 1em;
+	// width: 250px;
+	margin: 1em 0 2em 0;
 	font-weight: bold;
 	text-align: center;
 	text-decoration: none;
-	margin: 5px;
 }
 
-.introducing-cloudinary {
-	max-width: 80%;
-}
+// .introducing-cloudinary {
+// 	max-width: 80%;
+// }
 
 .static-photo img {
 	max-width: 20%;
@@ -104,22 +86,22 @@ td {
 	padding-right: 5px;
 }
 
-#direct_upload_jquery,
-#direct_upload {
-	box-sizing: content-box;
-}
+// #direct_upload_jquery,
+// #direct_upload {
+// 	box-sizing: content-box;
+// }
 
 #direct_upload_jquery,
 #direct_upload {
-	padding: 20px 20px;
-	margin: 20px 0;
+	padding: 1.5em;
+	margin: 1.5em 0;
 	border-top: 1px solid $gray-4;
 	border-bottom: 1px solid $gray-4;
 }
 
 #direct_upload_jquery h1,
 #direct_upload h1 {
-	margin: 0 0 15px 0;
+	margin: 0 0 1em 0;
 }
 
 .back_link {
@@ -136,10 +118,10 @@ form {
 	border-radius: 4px;
 }
 form .form_line {
-	margin-bottom: 20px;
+	margin-bottom: 1.5em;
 }
 form .form_controls {
-	margin-left: 180px;
+	margin-left: 1em;
 }
 form label {
 	float: left;

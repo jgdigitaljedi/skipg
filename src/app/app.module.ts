@@ -39,6 +39,8 @@ import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { UploaderComponent } from './widgets/uploader/uploader.component';
 import { ImageDialogComponent } from './widgets/image-dialog/image-dialog.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
 	declarations: [ AppComponent, ImageDialogComponent, routingComponents, UploaderComponent ],
@@ -63,7 +65,8 @@ import { ImageDialogComponent } from './widgets/image-dialog/image-dialog.compon
 		MatToolbarModule,
 		NgxMasonryModule,
 		ReactiveFormsModule,
-		SharedModule
+		SharedModule,
+		ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
 	],
 	providers: [],
 	bootstrap: [ AppComponent ],

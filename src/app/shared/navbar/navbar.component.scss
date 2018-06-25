@@ -13,8 +13,12 @@
 			width: 1.2em;
 			height: 1.2em;
 		}
-		&.active {
-			color: $red-sox-red;
-		}
+		// &.active {
+		// 	color: $red-sox-red;
+		// }
 	}
+}
+
+.active {
+  color: $red-sox-red;
 }
