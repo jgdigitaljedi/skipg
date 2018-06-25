@@ -1,25 +1,45 @@
+@import '../../styles/_variables';
 .home-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	img {
-		max-width: 20%;
-		&.mobile-photo {
-			max-width: 55%;
-		}
-	}
-	.letting-them-know {
-		&.full {
-			max-width: 50%;
-		}
-		&.mobile {
-			max-width: 95%;
-		}
-		.section-title {
-			font-weight: bold;
-		}
-		ul {
-			margin: .2em;
-		}
-	}
+  background-color: $primary;
+  min-height: calc(100vh - 36px);
+  padding: 2em;
+  .home-inner {
+    border: 1px solid $flat-white;
+    min-height: calc(100vh - 36px - 8em);
+    padding: 1em;
+    display: flex;
+    .home-inner--info, .home-inner--photos {
+      width: 50%;
+      &.home-inner--child-mobile {
+        width: 100%;
+      }
+    }
+    .home-inner--info {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      color: $flat-white;
+      justify-content: center;
+      a {
+        color: $flat-white;
+        &:visited {
+          color: lighten($primary, 25%);
+        }
+        &:hover {
+          color: $warn;
+        }
+      }
+      .home-inner--info--life, .home-inner--info--obit, .home-inner--info--links {
+        margin-bottom: 1.5em;
+        border-bottom: 1px solid $flat-white;
+      }
+      .home-inner--info--obit {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .home-inner--photos {
+
+    }
+  }
 }
