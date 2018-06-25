@@ -18,5 +18,8 @@
         </mat-card>
       </ngxMasonryItem>
     </ngx-masonry>
+    <div class="button-wrapper" *ngIf="photos && allPhotos && (photos.length !== allPhotos.length)">
+      <button mat-button (click)="getMorePhotos()">Load More Images</button>
+    </div>
   </div>
 </section>

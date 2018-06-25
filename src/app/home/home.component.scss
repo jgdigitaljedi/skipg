@@ -1,45 +1,51 @@
 @import '../../styles/_variables';
 .home-wrapper {
-  background-color: $primary;
-  min-height: calc(100vh - 36px);
-  padding: 2em;
-  .home-inner {
-    border: 1px solid $flat-white;
-    min-height: calc(100vh - 36px - 8em);
-    padding: 1em;
-    display: flex;
-    .home-inner--info, .home-inner--photos {
-      width: 50%;
-      &.home-inner--child-mobile {
-        width: 100%;
-      }
-    }
-    .home-inner--info {
-      display: flex;
-      flex-direction: column;
-      // align-items: center;
-      color: $flat-white;
-      justify-content: center;
-      a {
-        color: $flat-white;
-        &:visited {
-          color: lighten($primary, 25%);
-        }
-        &:hover {
-          color: $warn;
-        }
-      }
-      .home-inner--info--life, .home-inner--info--obit, .home-inner--info--links {
-        margin-bottom: 1.5em;
-        border-bottom: 1px solid $flat-white;
-      }
-      .home-inner--info--obit {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-    .home-inner--photos {
-
-    }
-  }
+	background-color: $primary;
+	min-height: calc(100vh - 36px);
+	padding: 2em;
+	.home-inner {
+		border: 1px solid $flat-white;
+		min-height: calc(100vh - 36px - 8em);
+		padding: 1em;
+		display: flex;
+		.home-inner--info,
+		.home-inner--photos {
+			width: 50%;
+			&.home-inner--child-mobile {
+				width: 100%;
+			}
+		}
+		.home-inner--info {
+			display: flex;
+			flex-direction: column;
+			// align-items: center;
+			color: $flat-white;
+			justify-content: center;
+			a {
+				color: $flat-white;
+				&:visited {
+					color: lighten($primary, 25%);
+				}
+				&:hover {
+					color: $warn;
+				}
+			}
+			.home-inner--info--life,
+			.home-inner--info--obit,
+			.home-inner--info--links {
+				margin-bottom: 1.5em;
+				// border-bottom: 1px solid $flat-white;
+			}
+			.home-inner--info--obit,
+			.home-inner--info--links {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		.home-inner--photos {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 }
