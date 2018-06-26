@@ -18,7 +18,7 @@
 		.home-inner--info {
 			display: flex;
 			flex-direction: column;
-			// align-items: center;
+			align-items: center;
 			color: $flat-white;
 			justify-content: center;
 			a {
@@ -30,10 +30,18 @@
 					color: $warn;
 				}
 			}
+			.divider {
+				width: 12%;
+				min-width: 80px;
+			}
 			.home-inner--info--life,
 			.home-inner--info--obit,
 			.home-inner--info--links {
 				margin-bottom: 1.5em;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
 				// border-bottom: 1px solid $flat-white;
 			}
 			.home-inner--info--obit,
@@ -46,6 +54,9 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			img {
+				max-width: 100%;
+			}
 		}
 	}
 }
