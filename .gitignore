@@ -37,3 +37,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# environment template since I'm using a prebuild script to inject analytics private key
+src/environments/environment.ts.template
