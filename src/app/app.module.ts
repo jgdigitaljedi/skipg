@@ -42,6 +42,9 @@ import { ImageDialogComponent } from './widgets/image-dialog/image-dialog.compon
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+// services
+import { GoogleAnalyticsService } from './services/google-analytics.service';
+
 @NgModule({
 	declarations: [ AppComponent, ImageDialogComponent, routingComponents, UploaderComponent ],
 	imports: [
@@ -68,7 +71,7 @@ import { environment } from '../environments/environment';
 		SharedModule,
 		ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
 	],
-	providers: [],
+	providers: [ GoogleAnalyticsService ],
 	bootstrap: [ AppComponent ],
 	entryComponents: [ ImageDialogComponent ]
 })
