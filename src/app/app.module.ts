@@ -16,7 +16,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgxMasonryModule } from 'ngx-masonry';
 
 export const cloudinary = {
-	Cloudinary: CloudinaryCore
+  Cloudinary: CloudinaryCore
 };
 export const config: CloudinaryConfiguration = cloudinaryConfiguration;
 
@@ -30,6 +30,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 // modules
 import { AppRoutingModule, routingComponents } from './app.routing';
@@ -46,33 +48,34 @@ import { environment } from '../environments/environment';
 import { GoogleAnalyticsService } from './services/google-analytics.service';
 
 @NgModule({
-	declarations: [ AppComponent, ImageDialogComponent, routingComponents, UploaderComponent ],
-	imports: [
-		AppRoutingModule,
-		BrowserAnimationsModule,
-		BrowserModule,
-		CloudinaryModule.forRoot(cloudinary, config),
-		FileUploadModule,
-		FlexLayoutModule,
-		FormsModule,
-		HttpClientModule,
-		InfiniteScrollModule,
-		MatButtonModule,
-		MatCardModule,
-		MatDialogModule,
-		MatFormFieldModule,
-		MatIconModule,
-		MatInputModule,
-		MatProgressBarModule,
-		MatStepperModule,
-		MatToolbarModule,
-		NgxMasonryModule,
-		ReactiveFormsModule,
-		SharedModule,
-		ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
-	],
-	providers: [ GoogleAnalyticsService ],
-	bootstrap: [ AppComponent ],
-	entryComponents: [ ImageDialogComponent ]
+  declarations: [AppComponent, ImageDialogComponent, routingComponents, UploaderComponent],
+  imports: [
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    CloudinaryModule.forRoot(cloudinary, config),
+    FileUploadModule,
+    FlexLayoutModule,
+    FormsModule,
+    HttpClientModule,
+    InfiniteScrollModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatStepperModule,
+    MatToolbarModule,
+    NgxMasonryModule,
+    ReactiveFormsModule,
+    SharedModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+  ],
+  providers: [GoogleAnalyticsService],
+  bootstrap: [AppComponent],
+  entryComponents: [ImageDialogComponent]
 })
-export class AppModule {}
+export class AppModule { }

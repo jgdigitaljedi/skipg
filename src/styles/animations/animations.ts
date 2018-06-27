@@ -1,7 +1,7 @@
 import { trigger, state, animate, transition, style, group } from '@angular/animations';
 
 export const fadeInAnimation = trigger('fadeInAnimation', [
-  transition(':enter', [style({ opacity: 0 }), animate('.65s', style({ opacity: 1 }))])
+  transition(':enter', [style({ opacity: 0 }), animate('1s', style({ opacity: 1 }))])
 ]);
 
 export const slideInOutAnimation = [
@@ -66,5 +66,15 @@ export const slideInOutAnimation = [
         )
       ])
     ])
+  ])
+];
+
+export const growAnimation = [
+  trigger('grow', [
+    transition('void <=> *', []),
+    transition('* <=> *', [
+      style({ height: '{{startHeight}}px', opacity: 0 }),
+      animate('.5s ease'),
+    ], { params: { startHeight: 0 } })
   ])
 ];

@@ -1,12 +1,11 @@
 <section class="image-dialog-wrapper">
-  <!-- <img [src]="data.base + data.photo.public_id" class="image-dialog--photo"> -->
-  <!-- <mat-dialog-content > -->
-    <cl-image #imageDir [public-id]="data.photo.public_id" class="image-dialog--photo" [ngStyle]="{'max-width': data.width, 'max-height': data.height}">
-    </cl-image>
-  <!-- </mat-dialog-content> -->
-  <!-- <mat-dialog-actions> -->
-    <button mat-button (click)="closeDialog()">
-      <mat-icon>close</mat-icon> Close
-    </button>    
-  <!-- </mat-dialog-actions> -->
+  <img #imageDir [src]="data.base + data.photo.public_id" class="image-dialog--photo" [ngStyle]="{'max-width': data.width, 'max-height': data.height}"
+    (load)="imageLoaded()" [hidden]="!imageDone" [@grow]="imageDone">
+  <div class="spinner-wrapper" *ngIf="!imageDone">
+    <mat-spinner></mat-spinner>
+  </div>
+  <button mat-button (click)="closeDialog()" *ngIf="imageDone">
+    <mat-icon>close</mat-icon> Close
+  </button>
+  <span class="save" *ngIf="imageDone">Right click to see save option</span>
 </section>

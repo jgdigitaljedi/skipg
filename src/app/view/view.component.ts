@@ -60,11 +60,11 @@ export class ViewComponent implements OnInit {
       finalHeight = height;
     }
     let dialogRef = this.dialog.open(ImageDialogComponent, {
-      width: `${finalWidth + 9}px`,
+      // width: `${finalWidth + 9}px`,
       maxWidth: '95%',
-      height: `${finalHeight + 50}px`,
+      // height: `${finalHeight + 50}px`,
       maxHeight: '100%',
-      data: { photo: which, base: this._cloud.photoBaseUrl(), width: finalWidth, height: finalHeight }
+      data: { photo: which, base: this._cloud.photoBaseUrl(), width: finalWidth, height: finalHeight, dialogDimensions: { width: `${finalWidth + 9}px`, height: `${finalHeight + 50}px` } }
     });
 
     dialogRef.afterClosed().subscribe((result) => {
