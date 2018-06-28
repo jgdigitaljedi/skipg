@@ -1,0 +1,24 @@
+@import '../../styles/_variables';
+.slideshow-outer-wrapper {
+	background-color: $primary;
+	min-height: calc(100vh - 64px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.image-wrapper {
+		height: calc(100vh - 150px);
+		img {
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+	.show-controls {
+		margin-top: .5em;
+		display: flex;
+		justify-content: center;
+		button {
+			margin-right: 2em;
+		}
+	}
+}

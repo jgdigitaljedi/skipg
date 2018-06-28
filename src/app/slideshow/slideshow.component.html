@@ -1,3 +1,17 @@
-<p>
-  slideshow works!
-</p>
+<section class="slideshow-outer-wrapper">
+  <div class="image-wrapper">
+    <img [src]="currentImage" class="slide-image" *ngIf="currentImage">
+  </div>
+  <div class="show-controls" color="warn">
+    <button mat-fab (click)="changeSlide('back')">
+      <mat-icon>skip_previous</mat-icon>
+    </button>
+    <button mat-fab (click)="isPaused ? startShow() : pauseShow()">
+      <mat-icon *ngIf="isPaused">play_arrow</mat-icon>
+      <mat-icon *ngIf="!isPaused">pause</mat-icon>
+    </button>
+    <button mat-fab (click)="changeSlide()">
+      <mat-icon>skip_next</mat-icon>
+    </button>
+  </div>
+</section>

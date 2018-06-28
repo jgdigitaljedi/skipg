@@ -31,7 +31,6 @@ export class ViewComponent implements OnInit {
 		this._cloud.getPhotos().subscribe((res) => {
 			this.allPhotos = res;
 			this.getMorePhotos();
-			console.log('all photos', res);
 		});
 	}
 
