@@ -1,6 +1,6 @@
 <section class="slideshow-outer-wrapper">
   <div class="image-wrapper">
-    <img [src]="currentImage" class="slide-image" *ngIf="currentImage">
+    <img [src]="currentImage" class="slide-image" *ngIf="currentImage" [@fadeIn]="animation === 'fadeIn'" [@grow]="animation === 'grow'">
   </div>
   <div class="show-controls" color="warn">
     <button mat-fab (click)="changeSlide('back')">
