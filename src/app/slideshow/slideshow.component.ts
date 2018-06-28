@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { fadeInAnimation, fadeInAnim2, growAnimation } from '../../styles/animations/animations';
+import { fadeInAnimation, fadeInAnim2, growAnimation, slideShowAnimations } from '../../styles/animations/animations';
 import { Photo } from '../services/photo';
 import { CloudinaryService } from '../services/cloudinary.service';
 import { ISSState } from '../models/slideshow.model';
@@ -8,7 +8,7 @@ import { ISSState } from '../models/slideshow.model';
   selector: 'app-slideshow',
   templateUrl: './slideshow.component.html',
   styleUrls: ['./slideshow.component.scss'],
-  animations: [fadeInAnimation, growAnimation, fadeInAnim2],
+  animations: [fadeInAnimation, slideShowAnimations],
   host: { '[@fadeInAnimation]': '' }
 })
 export class SlideshowComponent implements OnInit, OnDestroy {
@@ -82,6 +82,7 @@ export class SlideshowComponent implements OnInit, OnDestroy {
 
   private handleAnimation() {
     // testing only; will add real logic when concept proven to work
-    this.animation = this.animation === 'fadIn' ? 'grow' : 'fadeIn';
+    this.animation = this.animation === 'fadeIn' ? 'grow' : 'fadeIn';
+    console.log('animation', this.animation);
   }
 }
