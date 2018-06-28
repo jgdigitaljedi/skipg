@@ -1,10 +1,32 @@
 @import '../../../styles/_variables';
 .image-dialog-wrapper {
 	width: 100%;
+	height: auto;
 	::ng-deep .image-dialog--photo {
 		// width: auto;
 		// max-height: calc(100% - 50px);
 		// max-width: 80%;
 		// object-fit: cover;
+	}
+	.spinner-wrapper {
+		width: 120px;
+		height: 120px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: .5em;
+	}
+	.actions-wrapper {
+		padding: 0 4px;
+		.close-button {
+			background-color: $warn;
+			margin-right: 1em;
+			color: #fff;
+			font-weight: bold;
+			border-radius: 4px;
+		}
+		.save {
+			font-style: italic;
+		}
 	}
 }

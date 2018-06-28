@@ -3,14 +3,24 @@
 	background-color: $flat-white;
 	padding: 1em;
 	text-align: center;
+	min-height: calc(100vh - 80px - 1em);
 	.photos-masonry-wrapper {
-		.masonry-item {
-			width: 350px;
-			mat-card {
-        margin-bottom: 1em;
-        cursor: pointer;
-				.photo-grid--tile--image {
-					max-width: 300px;
+		margin: 0 auto;
+		.masonry-wrapper {
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			.masonry-item {
+				margin: 0 auto;
+				width: 350px;
+				mat-card {
+					margin-bottom: 1em;
+					cursor: pointer;
+					.photo-grid--tile--image {
+						max-width: 300px;
+					}
 				}
 			}
 		}
