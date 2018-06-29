@@ -16,7 +16,8 @@ a,
 section,
 input,
 li {
-	font-family: 'Montserrat', sans-serif;
+  // font-family: 'Montserrat', sans-serif;
+  font-family: $sans-font;
 }
 
 h1,
@@ -27,7 +28,8 @@ h5,
 h6,
 button,
 .title {
-	font-family: 'Merriweather', serif;
+  // font-family: 'Merriweather', serif;
+  font-family: $serif-font;
 }
 
 .disabled-btn {

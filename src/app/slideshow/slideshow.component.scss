@@ -2,11 +2,16 @@
 .slideshow-outer-wrapper {
 	overflow: hidden;
 	background-color: $primary;
-	min-height: calc(100vh - 64px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+  flex-direction: column;
+  &.standard {
+    min-height: calc(100vh - 64px);
+  }
+  &.mobile {
+    min-height: calc(100vh - 56px);
+  }
 	.image-wrapper {
 		height: calc(100vh - 150px);
 		display: flex;

@@ -1,5 +1,9 @@
 {
   "index": "/index.html",
+  "appData": {
+    "name": "SkipG.me",
+    "description": "An app to memorialize Maurice \"Skip\" Gauthier"
+  },
   "assetGroups": [
     {
       "name": "app",
@@ -23,6 +27,17 @@
         ],
         "urls": [
           "https://fonts.googleapis.com/**"
+        ]
+      }
+    },
+    {
+      "name": "cloudinary",
+      "installMode": "lazy",
+      "updateMode": "lazy",
+      "resources": {
+        "urls": [
+          "https://res.cloudinary.com/*",
+          "http://res.cloudinary.com/*"
         ]
       }
     }

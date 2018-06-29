@@ -31,6 +31,8 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 // modules
@@ -67,6 +69,7 @@ import { GoogleAnalyticsService } from './services/google-analytics.service';
     MatInputModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
+    MatSelectModule,
     MatStepperModule,
     MatToolbarModule,
     NgxMasonryModule,
