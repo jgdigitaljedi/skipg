@@ -3,14 +3,19 @@
 	background-color: $primary;
 	height: calc(100vh - 64px - 4em);
 	padding: 2em;
-	&.mobile {
-		height: calc(100vh - 56px - 4em);
+	&.mobile-wrapper {
+		min-height: calc(100vh - 56px - 1em);
+		height: auto;
+		padding: .5em;
 	}
 	.home-inner {
 		border: 1px solid $flat-white;
 		height: calc(100vh - 36px - 8em);
 		padding: 1em;
 		display: flex;
+		&.mobile-inner {
+			height: auto;
+		}
 		.home-inner--info,
 		.home-inner--photos {
 			width: 50%;

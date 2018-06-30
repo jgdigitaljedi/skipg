@@ -81,4 +81,9 @@ export class ViewComponent implements OnInit {
 			// console.log('The dialog was closed');
 		});
 	}
+
+	scrollTop() {
+		// document.body.scrollTop = document.documentElement.scrollTop = 0;
+		window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+	}
 }

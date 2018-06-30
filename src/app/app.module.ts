@@ -29,9 +29,7 @@ import { faCommentAlt } from '@fortawesome/free-solid-svg-icons/faCommentAlt';
 import { faMinus } from '@fortawesome/free-solid-svg-icons/faMinus';
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH';
 import { faExclamation } from '@fortawesome/free-solid-svg-icons/faExclamation';
-import { faPrint } from '@fortawesome/free-solid-svg-icons/faPrint';
 import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import { faPinterestP } from '@fortawesome/free-brands-svg-icons/faPinterestP';
 import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons/faFacebookMessenger';
 
@@ -39,9 +37,7 @@ const icons = [
 	faFacebookF,
 	faTwitter,
 	faCommentAlt,
-	faEnvelope,
 	faCheck,
-	faPrint,
 	faExclamation,
 	faEllipsisH,
 	faMinus,
