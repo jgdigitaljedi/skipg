@@ -1,25 +1,35 @@
 <mat-toolbar fxHide.lt-md="true" fxShow.gt-sm="true" fxFlex="100" fxLayout="row" color="primary">
   <span class="skip-title">Skip Gauthier</span>
   <div class="nav-buttons">
-    <button mat-button [class.active]="activeRoute === '/home'" (click)="navNext('/home')" class="nav-btn">
-      <mat-icon>home</mat-icon>
-      <span class="nav-text">Home</span>
-    </button>
-    <button mat-button [class.active]="activeRoute === '/slideshow'" (click)="navNext('/slideshow')" class="nav-btn">
-      <mat-icon>slideshow</mat-icon>
-      <span class="nav-text">Slideshow</span>
-    </button>
-    <button mat-button [class.active]="activeRoute === '/upload'" (click)="navNext('/upload')" class="nav-btn">
-      <mat-icon>cloud_upload</mat-icon>
-      <span class="nav-text">Upload Photos</span>
-    </button>
-    <button mat-button [class.active]="activeRoute === '/view'" (click)="navNext('/view')" class="nav-btn">
-      <mat-icon>photo_album</mat-icon>
-      <span class="nav-text">View Photos</span>
-    </button>
-    <button mat-button [class.active]="activeRoute === '/info'" (click)="navNext('/info')" class="nav-btn info-button">
-      <mat-icon>info</mat-icon>
-    </button>
+    <div [class.active]="activeRoute === '/home'" (click)="navNext('/home')" class="nav-btn">
+      <div class="inner-button">
+        <mat-icon>home</mat-icon>
+        <span class="nav-text">Home</span>
+      </div>
+    </div>
+    <div [class.active]="activeRoute === '/slideshow'" (click)="navNext('/slideshow')" class="nav-btn">
+      <div class="inner-button">
+        <mat-icon>slideshow</mat-icon>
+        <span class="nav-text">Slideshow</span>
+      </div>
+    </div>
+    <div [class.active]="activeRoute === '/upload'" (click)="navNext('/upload')" class="nav-btn">
+      <div class="inner-button">
+        <mat-icon>cloud_upload</mat-icon>
+        <span class="nav-text">Upload Photos</span>
+      </div>
+    </div>
+    <div [class.active]="activeRoute === '/view'" (click)="navNext('/view')" class="nav-btn">
+      <div class="inner-button">
+        <mat-icon>photo_album</mat-icon>
+        <span class="nav-text">View Photos</span>
+      </div>
+    </div>
+    <div [class.active]="activeRoute === '/info'" (click)="navNext('/info')" class="nav-btn info-button">
+      <div class="inner-button">
+        <mat-icon>info</mat-icon>
+      </div>
+    </div>
   </div>
 </mat-toolbar>
 

@@ -7,28 +7,35 @@
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
+	.nav-btn {
+		display: flex;
+		align-items: flex-end;
+		font-weight: bold;
+		font-size: .6em;
+		font-family: $serif-font;
+		cursor: pointer;
+		.inner-button {
+			transition: all .3s ease-in-out;
+			display: flex;
+			align-items: center;
+			&:hover {
+				margin-bottom: .4em;
+			}
+			mat-icon {
+				font-size: 1.2em;
+				width: 1.2em;
+				height: 1.2em;
+				margin-right: .1em;
+			}
+		}
+	}
 	.nav-btn:not(.info-button) {
 		padding: 0;
 		margin: auto 1em;
 		min-width: 0;
 		width: auto;
-		::ng-deep .mat-button-wrapper {
-			display: flex;
-			align-items: flex-end;
-			font-weight: bold;
-		}
-		&:hover {
-			margin-bottom: .1em;
-		}
 		.nav-text {
 			font-family: $serif-font !important;
-		}
-		mat-icon {
-			font-size: 1.2em;
-			width: 1.2em;
-			height: 1.2em;
-			margin-bottom: 6px;
-			margin-right: .1em;
 		}
 	}
 	.info-button {
@@ -60,4 +67,8 @@
 .mobile-btn {
 	font-family: $serif-font !important;
 	font-weight: bold;
+}
+
+::ng-deep .mat-button:hover {
+	background-color: transparent !important;
 }

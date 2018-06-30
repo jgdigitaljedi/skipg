@@ -13,7 +13,7 @@
     <button mat-fab (click)="changeSlide('next')">
       <mat-icon>skip_next</mat-icon>
     </button>
-    <button mat-fab (click)="playPauseMusic()">
+    <button mat-fab (click)="playPauseMusic()" class="music-btn">
       <mat-icon *ngIf="musicPaused">volume_up</mat-icon>
       <mat-icon *ngIf="!musicPaused">volume_off</mat-icon>
     </button>
