@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 			this._appendGaTrackingCode();
 		}
 		this._activated.url.subscribe((url: UrlSegment[]) => {
-			console.log('url', url);
+			// console.log('url', url);
 		});
 	}
 

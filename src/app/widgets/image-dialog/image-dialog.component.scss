@@ -24,6 +24,9 @@
 			color: #fff;
 			font-weight: bold;
 			border-radius: 4px;
+			&:hover {
+				background-color: $primary !important;
+			}
 		}
 		.save {
 			font-style: italic;

@@ -59,8 +59,10 @@ export class SlideshowComponent implements OnInit, OnDestroy {
 		this.routeSub = this._route.events.subscribe((event) => {
 			if (event instanceof NavigationStart) {
 				this.audio.pause();
-				this.audio = null;
-				clearInterval(this.timer);
+				setTimeout(() => {
+					this.audio = null;
+					clearInterval(this.timer);
+				}, 100);
 			}
 		});
 		this.baseUrl = this._cloud.photoBaseUrl();
