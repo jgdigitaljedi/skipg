@@ -21,6 +21,7 @@ export class SlideshowComponent implements OnInit, OnDestroy {
 	interval = 5000;
 	isPaused = false;
 	animation: string;
+	musicPaused = true;
 	animationArr = [
 		'fadeIn',
 		'fadeInRight',
@@ -77,7 +78,6 @@ export class SlideshowComponent implements OnInit, OnDestroy {
 		clearInterval(this.timer);
 		if (dir === 'back') {
 			this.state.currIndex--;
-			// this.state.currIndex = this.state.currIndex - 2;
 		} else {
 			this.state.currIndex++;
 		}
@@ -94,16 +94,12 @@ export class SlideshowComponent implements OnInit, OnDestroy {
 			} else {
 				this.state.currIndex = 0;
 			}
-			console.log('interval', this.state.currIndex);
 			this.currentImage = this.baseUrl + this.allPhotos[this.state.currIndex].public_id;
 		}, this.interval);
 	}
 
 	private handleAnimation() {
-		// testing only; will add real logic when concept proven to work
-		// this.animation = this.animation === 'fadeIn' ? 'bounceInRight' : 'fadeIn';
 		const rando = Math.floor(Math.random() * this.animationArr.length);
 		this.animation = this.animationArr[rando];
-		console.log('animation', this.animation);
 	}
 }

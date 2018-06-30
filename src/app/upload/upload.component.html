@@ -1,4 +1,4 @@
-<mat-horizontal-stepper [linear]="true" #stepper>
+<mat-vertical-stepper class="upload-stepper" [linear]="true" #stepper>
   <mat-step [stepControl]="firstForm" class="stepper">
     <form [formGroup]="firstForm" class="stepper-form">
       <ng-template matStepLabel>DISCLAIMER!</ng-template>
@@ -57,4 +57,4 @@
       </button>
     </div>
   </mat-step>
-</mat-horizontal-stepper>
+</mat-vertical-stepper>

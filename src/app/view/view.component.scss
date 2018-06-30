@@ -1,6 +1,6 @@
 @import '../../styles/_variables';
 .photos-view {
-	background-color: $flat-white;
+	background-color: $primary;
 	padding: 1em;
 	text-align: center;
 	min-height: calc(100vh - 80px - 1em);
@@ -16,13 +16,18 @@
 				margin: 0 auto;
 				width: 350px;
 				mat-card {
-					margin-bottom: 1em;
+					margin-bottom: .75em;
 					cursor: pointer;
 					.photo-grid--tile--image {
 						max-width: 300px;
 					}
 				}
 			}
+		}
+		.button-wrapper button {
+			color: #fff;
+			font-weight: bold;
+			background-color: $warn;
 		}
 	}
 }
