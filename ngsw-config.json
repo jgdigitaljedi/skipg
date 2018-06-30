@@ -1,45 +1,39 @@
 {
-  "index": "/index.html",
-  "appData": {
-    "name": "SkipG.me",
-    "description": "An app to memorialize Maurice \"Skip\" Gauthier"
-  },
-  "assetGroups": [
-    {
-      "name": "app",
-      "installMode": "prefetch",
-      "resources": {
-        "files": [
-          "/favicon.ico",
-          "/index.html",
-          "/*.css",
-          "/*.js"
-        ]
-      }
-    },
-    {
-      "name": "assets",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
-      "resources": {
-        "files": [
-          "/assets/**"
-        ],
-        "urls": [
-          "https://fonts.googleapis.com/**"
-        ]
-      }
-    },
-    {
-      "name": "cloudinary",
-      "installMode": "lazy",
-      "updateMode": "lazy",
-      "resources": {
-        "urls": [
-          "https://res.cloudinary.com/*",
-          "http://res.cloudinary.com/*"
-        ]
-      }
-    }
-  ]
+	"index": "/index.html",
+	"appData": {
+		"name": "SkipG.me",
+		"description": "An app to memorialize Maurice \"Skip\" Gauthier"
+	},
+	"assetGroups": [
+		{
+			"name": "app",
+			"installMode": "prefetch",
+			"resources": {
+				"files": [ "/favicon.ico", "/index.html", "/*.css", "/*.js" ]
+			}
+		},
+		{
+			"name": "assets",
+			"installMode": "lazy",
+			"updateMode": "prefetch",
+			"resources": {
+				"files": [ "/assets/**" ],
+				"urls": [ "https://fonts.googleapis.com/**" ]
+			}
+		},
+		{
+			"name": "cloudinary",
+			"installMode": "lazy",
+			"updateMode": "lazy",
+			"resources": {
+				"urls": [
+					"https://res.cloudinary.com/skipg-me/image/upload/v1529667001/skipg/*.jpg",
+					"https://res.cloudinary.com/skipg-me/image/upload/v1529667001/skipg/*.jpeg",
+					"https://res.cloudinary.com/skipg-me/image/upload/v1529667001/skipg/*.gif",
+					"https://res.cloudinary.com/skipg-me/image/upload/v1529667001/skipg/*.png",
+					"https://res.cloudinary.com/skipg-me/image/upload/c_scale,w_300/v1/skipg/*"
+				]
+			}
+		}
+	]
 }

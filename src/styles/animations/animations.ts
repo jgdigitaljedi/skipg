@@ -1,4 +1,4 @@
-import { trigger, state, animate, transition, style, group, useAnimation } from '@angular/animations';
+import { trigger, state, animate, transition, style, group, useAnimation, query } from '@angular/animations';
 import {
 	bounceInRight,
 	bounceInLeft,
@@ -99,15 +99,6 @@ export const slideInOutAnimation = [
 	])
 ];
 
-export const growAnimation = [
-	trigger('grow', [
-		transition('void <=> *', []),
-		transition('* <=> *', [ style({ height: '{{startHeight}}px', opacity: 0 }), animate('.8s ease-in-out') ], {
-			params: { startHeight: 0 }
-		})
-	])
-];
-
 export const slideShowAnimations = [
 	trigger('slideShow', [
 		transition('* => bounceInRight', useAnimation(bounceInRight)),
@@ -131,3 +122,10 @@ export const slideShowAnimations = [
 		transition('* => rollIn', useAnimation(rollIn))
 	])
 ];
+
+// export const enterFade = trigger('enterFade', [ transition(':enter', useAnimation(fadeIn)) ]);
+export const enterFade = trigger('enterFade', [
+	state('void', style({ opacity: 0, height: 0 })),
+	state('*', style({ opacity: 1, height: '*' })),
+	transition(':enter', animate(`.8s ease-out`))
+]);

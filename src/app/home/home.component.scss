@@ -1,8 +1,11 @@
 @import '../../styles/_variables';
 .home-wrapper {
 	background-color: $primary;
-	min-height: calc(100vh - 36px);
+	min-height: calc(100vh - 64px - 4em);
 	padding: 2em;
+	&.mobile {
+		min-height: calc(100vh - 56px - 4em);
+	}
 	.home-inner {
 		border: 1px solid $flat-white;
 		min-height: calc(100vh - 36px - 8em);

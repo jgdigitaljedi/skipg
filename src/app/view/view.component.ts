@@ -2,15 +2,15 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { CloudinaryService } from '../services/cloudinary.service';
 import { MatDialog } from '@angular/material';
 import { ImageDialogComponent } from '../widgets/image-dialog/image-dialog.component';
-import { fadeInAnimation } from '../../styles/animations/animations';
+import { enterFade } from '../../styles/animations/animations';
 import { Photo } from '../services/photo';
 
 @Component({
 	selector: 'app-view',
 	templateUrl: './view.component.html',
 	styleUrls: [ './view.component.scss' ],
-	animations: [ fadeInAnimation ],
-	host: { '[@fadeInAnimation]': '' }
+	animations: [ enterFade ],
+	host: { '[@enterFade]': '' }
 })
 export class ViewComponent implements OnInit {
 	// @TODO: add infinite scroll and call getMorePhotos

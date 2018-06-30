@@ -1,12 +1,12 @@
 import { Component, OnInit, Inject, ViewChild, ElementRef } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { growAnimation, fadeInAnimation, fadeInAnim2 } from '../../../styles/animations/animations';
+import { fadeInAnimation, fadeInAnim2 } from '../../../styles/animations/animations';
 
 @Component({
 	selector: 'app-image-dialog',
 	templateUrl: './image-dialog.component.html',
 	styleUrls: [ './image-dialog.component.scss' ],
-	animations: [ growAnimation, fadeInAnimation, fadeInAnim2 ]
+	animations: [ fadeInAnimation, fadeInAnim2 ]
 })
 export class ImageDialogComponent implements OnInit {
 	@ViewChild('imageDir') imageDir: ElementRef;
