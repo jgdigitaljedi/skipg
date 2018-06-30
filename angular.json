@@ -27,7 +27,8 @@
 							"src/assets",
 							"src/manifest.json",
 							"src/robots.txt",
-							"src/google7120c301d88f2b04.html"
+							"src/google7120c301d88f2b04.html",
+							"src/sitemap.xml"
 						],
 						"styles": [
 							{
