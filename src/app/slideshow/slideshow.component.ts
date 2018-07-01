@@ -5,6 +5,7 @@ import { CloudinaryService } from '../services/cloudinary.service';
 import { ISSState } from '../models/slideshow.model';
 import * as _shuffle from 'lodash/shuffle';
 import { Router, NavigationStart } from '@angular/router';
+import { GoogleAnalyticsService } from '../services/google-analytics.service';
 
 @Component({
 	selector: 'app-slideshow',
@@ -53,15 +54,20 @@ export class SlideshowComponent implements OnInit, OnDestroy {
 	songIndex = -1;
 	routeSub;
 
-	constructor(private _cloud: CloudinaryService, private _route: Router) {}
+	constructor(private _cloud: CloudinaryService, private _route: Router, private _ga: GoogleAnalyticsService) {}
 
 	ngOnInit() {
 		this.routeSub = this._route.events.subscribe((event) => {
 			if (event instanceof NavigationStart) {
-				this.audio.pause();
+				if (this.audio) {
+					// if audio exists the pause
+					this.audio.pause();
+				}
+				// clear photo interval
+				clearInterval(this.timer);
 				setTimeout(() => {
+					// set audio to null for good measure
 					this.audio = null;
-					clearInterval(this.timer);
 				}, 100);
 			}
 		});
@@ -92,10 +98,12 @@ export class SlideshowComponent implements OnInit, OnDestroy {
 	pauseShow() {
 		this.isPaused = true;
 		clearInterval(this.timer);
+		this._ga.emitEvent('Slideshow', 'click', 'slide paused');
 	}
 
 	changeSlide(dir) {
 		clearInterval(this.timer);
+		this._ga.emitEvent('Slideshow', 'click', `slide ${dir || 'forward'}`);
 		if (dir === 'back') {
 			this.state.currIndex--;
 		} else {
@@ -108,6 +116,7 @@ export class SlideshowComponent implements OnInit, OnDestroy {
 	playPauseMusic(noPause?) {
 		if (!this.audio) {
 			this.audio = new Audio();
+			this._ga.emitEvent('Slideshow', 'click', 'music started');
 		}
 		if (!noPause) {
 			this.musicPaused = !this.musicPaused;

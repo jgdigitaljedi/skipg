@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material';
 import { ImageDialogComponent } from '../widgets/image-dialog/image-dialog.component';
 import { enterFade } from '../../styles/animations/animations';
 import { Photo } from '../services/photo';
+import { GoogleAnalyticsService } from '../services/google-analytics.service';
 
 @Component({
 	selector: 'app-view',
@@ -26,7 +27,7 @@ export class ViewComponent implements OnInit {
 		fitWidth: true
 	};
 
-	constructor(private _cloud: CloudinaryService, public dialog: MatDialog) {
+	constructor(private _cloud: CloudinaryService, private _ga: GoogleAnalyticsService, public dialog: MatDialog) {
 		this.gridColumns = Math.floor(window.innerWidth / 300);
 	}
 
@@ -38,6 +39,7 @@ export class ViewComponent implements OnInit {
 	}
 
 	getMorePhotos(): void {
+		this._ga.emitEvent('View', 'click', 'more photos loaded');
 		const pLen = this.photos.length;
 		if (pLen) {
 			const currentPhotos = [ ...this.photos ];
@@ -49,6 +51,7 @@ export class ViewComponent implements OnInit {
 	}
 
 	openImageDialog(which) {
+		this._ga.emitEvent('View', 'click', 'image dialog opened');
 		const { width, height } = which;
 		// minus 50 px for the close area at the bottom
 		const screenHeight = window.innerHeight - 50;
@@ -86,6 +89,7 @@ export class ViewComponent implements OnInit {
 	}
 
 	scrollTop() {
+		this._ga.emitEvent('View', 'click', 'scroll top');
 		window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
 	}
 }

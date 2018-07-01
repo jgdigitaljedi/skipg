@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject, ViewChild, ElementRef } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { fadeInAnimation, fadeInAnim2 } from '../../../styles/animations/animations';
+import { GoogleAnalyticsService } from '../../services/google-analytics.service';
 
 @Component({
 	selector: 'app-image-dialog',
@@ -12,11 +13,16 @@ export class ImageDialogComponent implements OnInit {
 	@ViewChild('imageDir') imageDir: ElementRef;
 	imageDone = false;
 
-	constructor(public dialogRef: MatDialogRef<ImageDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {}
+	constructor(
+		private _ga: GoogleAnalyticsService,
+		public dialogRef: MatDialogRef<ImageDialogComponent>,
+		@Inject(MAT_DIALOG_DATA) public data: any
+	) {}
 
 	ngOnInit() {}
 
 	closeDialog(): void {
+		this._ga.emitEvent('Image Dialog', 'click', 'close button');
 		this.dialogRef.close();
 	}
 

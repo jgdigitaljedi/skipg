@@ -16,6 +16,7 @@
   - build db model for photos (comments, tags, uploader, date uploaded, date taken, cloudinary id, dimensions)
   - build photo endpoints (get photo info, set photo info, update photo info, search photos by tags, sort photos?, download all photos)
   - build delete photo endpoint (will have to delete db entry and cloudinary photo via API)
+  - build push notification service for PWA
 5) revisit styles AGAIN
 6) Write tests
 7) look into making a turn-key solution (move to private repo here) 

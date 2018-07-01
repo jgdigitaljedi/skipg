@@ -39,6 +39,7 @@ export class GoogleAnalyticsService {
 				eventAction: eventAction,
 				eventValue: eventValue
 			});
+			console.log(`${eventCategory} ${eventAction} ${eventLabel}`);
 		}
 	}
 }
