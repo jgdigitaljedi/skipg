@@ -17,7 +17,7 @@
 			"installMode": "lazy",
 			"updateMode": "prefetch",
 			"resources": {
-				"files": [ "/assets/**" ],
+				"files": [ "/assets/**", "/assets/songs/**" ],
 				"urls": [ "https://fonts.googleapis.com/**" ]
 			}
 		},

@@ -1,6 +1,5 @@
 <section class="info-wrapper">
   <h1>Skipg.me is a work-in-progress</h1>
-  <!-- <img src="../../assets/IMG_1745.jpg" alt="Maurice Gauthier" class="pop-photo" ngClass.lt-md="mobile-photo"> -->
   <div class="letting-them-know" ngClass.lt-md="mobile" ngClass.gt-sm="full">
     <p>
       Hey family, Joey here. I told yous guys I was gonna build a site to memorialize Pop. I have big plans, but they are going
@@ -21,8 +20,6 @@
         for a photo you upload and tie into a comment system I plan to make in the future to allow you to comment on photos
         adding a social aspect.
       </li>
-      <li>Social network share buttons to share the site or individual photos on Facebook, Twitter, Pinterest, etc with the click
-        of a button.</li>
       <li>Gesture support for mobile devices to allow swiping to dismiss pictures or open the navigation options.</li>
     </ul>
     <span class="section-title title">Home</span>
@@ -47,14 +44,17 @@
   <p>If you are a curious mind, you can look at my code by clicking
     <a target="__blank" href="https://github.com/jgdigitaljedi/skipg">HERE</a>
   </p>
-  <share-buttons [theme]="'material-dark'"
-    [include]="['facebook','twitter', 'pinterest','messenger','sms']"
-    [show]="5"
-    [showCount]="false"
-    [url]="'https://skipg.me/'"
-    [title]="'SkipG.me'"
-    [description]="'A memorial site for Maurice \'Skip\' Gauthier.'"
-    [image]="'https://skipg.me/assets/collage.jpg'"
-    [tags]="'Maurice Gauthier, Skip Gauthier, Pere Pere'"
-  ></share-buttons>
+  <div class="share">
+    <h3>Wanna share this site?</h3>
+    <share-buttons [theme]="'material-dark'"
+      [include]="['facebook','twitter', 'pinterest','messenger','sms']"
+      [show]="5"
+      [showCount]="false"
+      [url]="'https://skipg.me/'"
+      [title]="'SkipG.me'"
+      [description]="'A memorial site for Maurice \'Skip\' Gauthier.'"
+      [image]="'https://skipg.me/assets/collage.jpg'"
+      [tags]="'Maurice Gauthier, Skip Gauthier, Pere Pere'"
+    ></share-buttons>
+  </div>
 </section>

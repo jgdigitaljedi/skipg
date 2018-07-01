@@ -1,8 +1,8 @@
 <section class="uploader-wrapper">
-  <mat-card ngClass.gt-sm="card-desktop" ngClass.lt-md="card-mobile">
+  <div ngClass.gt-sm="card-desktop" ngClass.lt-md="card-mobile">
     <div id="direct_upload" ng2FileDrop [uploader]="uploader" (fileOver)="fileOverBase($event)" [ngClass]="{'nv-file-over': hasBaseDropZoneOver}">
       <h1>Upload New Photo of Skip</h1>
-      <p>You can also drag and drop an image file into the dashed area.</p>
+      <p>You can also drag and drop and image or multiple images into the dashed area.</p>
       <form>
         <div class="form_line">
           <div class="form_controls">
@@ -14,7 +14,7 @@
         <div class="form_line">
           <div class="form_controls">
             <div class="upload_button_holder">
-              <label class="upload_button red-blue-fade" for="fileupload">
+              <label class="upload_button red-button" for="fileupload">
                 <mat-icon>cloud_upload</mat-icon>
                 Upload Image
               </label>
@@ -45,15 +45,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="info">
-          <table>
-            <tr *ngFor="let property of getFileProperties(response.data)">
-              <td> {{ property.key }} </td>
-              <td> {{ property.value | json}} </td>
-            </tr>
-          </table>
-        </div> -->
       </div>
     </div>
-  </mat-card>
+  </div>
 </section>

@@ -13,7 +13,7 @@
           <input matInput placeholder="Name" formControlName="firstCtrl" required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperNext class="control-btn red-fade">
+          <button mat-button matStepperNext class="control-btn red-button">
             Next Step
             <mat-icon>arrow_forward</mat-icon>
           </button>
@@ -35,11 +35,12 @@
           <input #passField matInput type="password" placeholder="Enter password" formControlName="secondCtrl" required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperPrevious class="control-btn blue-fade">
+          <button mat-button matStepperPrevious class="control-btn blue-button">
             <mat-icon>arrow_back</mat-icon>
             Previous Step
           </button>
-          <button mat-button matStepperNext class="control-btn red-fade" [disabled]="passField.value !== ffPass" [class.disabled-btn]="passField.value !== ffPass">
+          <button mat-button matStepperNext class="control-btn" [class.red-button]="passField.value === ffPass"
+            [disabled]="passField.value !== ffPass" [class.disabled-button]="passField.value !== ffPass">
             Next Step
             <mat-icon>arrow_forward</mat-icon>
           </button>
@@ -51,7 +52,7 @@
     <ng-template matStepLabel>Upload Photos</ng-template>
     <app-uploader></app-uploader>
     <div class="previous-wrapper">
-      <button mat-button matStepperPrevious class="control-btn blue-fade">
+      <button mat-button matStepperPrevious class="control-btn blue-button">
         <mat-icon>arrow_back</mat-icon>
         Previous Step
       </button>

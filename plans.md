@@ -1,33 +1,21 @@
 ## Skipg.me plans
 
 #### Technical/Infrastructure
-- use Cloudinary for photo hosting
 - setup CI
-- make a responsive PWA
-- use nginx
 - use backend as a service to store photo details (just to prevent having to mess with backend hosting on VPS)
 
-#### Views
-- Home
-  - need a landing page/no hard plans yet
-  - have obituary PDF
-  - have any links to obit, Owens & Brumley, etc
-- Slideshow
-  - randomly generate slideshow using all available photos
-  - maybe have music? (if so...Proud Mary, Dancing in the Street, I've Got You Babe)
-- upload photos
-  - upload directly to cloudinary and immediately use in slideshow and download page
-  - have part of upload process have form with uploader's name and a comments section for info about the photo (optional)
-  - have upload password protected and share password with family
-- view photos
-  - dynamically show photos in a grid with who uploaders name, comments if any, and date uploaded
-  - have each photo show enlarged when clicked
-  - have download button for each photo
-  - have Download All button at top of page that downloads all photos in a zip file
-
-
-#### Step by step
-- create overall style language
-- remove 'Other' section and put those contents in home
-- create mobile nav solution and bring in flex-layout to help with mobile stuff
-- decide on image hosting solution and integrate (leaning on Cloudinary but need to research)
+#### Roadmap
+1) refine styles
+2) add gesture support (hammerJs)
+3) cleanup code, add comments and types
+4) build backend
+  - build user model
+  - build auth
+  - build signup
+  - look into auto email service so I can screen people signing up
+  - build db model for photos (comments, tags, uploader, date uploaded, date taken, cloudinary id, dimensions)
+  - build photo endpoints (get photo info, set photo info, update photo info, search photos by tags, sort photos?, download all photos)
+  - build delete photo endpoint (will have to delete db entry and cloudinary photo via API)
+5) revisit styles AGAIN
+6) Write tests
+7) look into making a turn-key solution (move to private repo here) 

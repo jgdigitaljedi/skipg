@@ -22,4 +22,9 @@
 			margin: .2em;
 		}
 	}
+	.share {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }

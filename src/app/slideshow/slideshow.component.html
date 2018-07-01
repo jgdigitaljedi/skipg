@@ -3,17 +3,17 @@
     <img [src]="currentImage" class="slide-image" *ngIf="currentImage" [@slideShow]="animation">
   </div>
   <div class="show-controls" color="warn">
-    <button mat-fab (click)="changeSlide('back')">
+    <button mat-fab class="white-button" (click)="changeSlide('back')">
       <mat-icon>skip_previous</mat-icon>
     </button>
-    <button mat-fab (click)="isPaused ? startShow() : pauseShow()">
+    <button mat-fab class="white-button" (click)="isPaused ? startShow() : pauseShow()">
       <mat-icon *ngIf="isPaused">play_arrow</mat-icon>
       <mat-icon *ngIf="!isPaused">pause</mat-icon>
     </button>
-    <button mat-fab (click)="changeSlide('next')">
+    <button mat-fab class="white-button" (click)="changeSlide('next')">
       <mat-icon>skip_next</mat-icon>
     </button>
-    <button mat-fab (click)="playPauseMusic()" class="music-btn">
+    <button mat-fab (click)="playPauseMusic()" class="red-button">
       <mat-icon *ngIf="musicPaused">volume_up</mat-icon>
       <mat-icon *ngIf="!musicPaused">volume_off</mat-icon>
     </button>

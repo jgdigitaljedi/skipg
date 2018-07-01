@@ -13,10 +13,13 @@ import { Photo } from '../services/photo';
 	host: { '[@enterFade]': '' }
 })
 export class ViewComponent implements OnInit {
-	// @TODO: add infinite scroll and call getMorePhotos
+	// array of objects from cloudinary containing info about photos
 	allPhotos: Photo[] = [];
+	// array of currently loaded photos since they load a few at a time
 	photos: Photo[] = [];
+	// how many grid columns will be on the screen for masonry layout
 	gridColumns: number;
+	// masonry options
 	options = {
 		gutter: 10,
 		transitionDuration: '0.8s',
@@ -34,7 +37,7 @@ export class ViewComponent implements OnInit {
 		});
 	}
 
-	getMorePhotos() {
+	getMorePhotos(): void {
 		const pLen = this.photos.length;
 		if (pLen) {
 			const currentPhotos = [ ...this.photos ];
@@ -83,7 +86,6 @@ export class ViewComponent implements OnInit {
 	}
 
 	scrollTop() {
-		// document.body.scrollTop = document.documentElement.scrollTop = 0;
 		window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
 	}
 }
