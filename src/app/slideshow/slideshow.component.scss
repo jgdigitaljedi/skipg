@@ -2,6 +2,8 @@
 .slideshow-outer-wrapper {
 	overflow: hidden;
 	background-color: $primary;
+	background-image: url('../../assets/vichy.png');
+	background-repeat: repeat repeat;
 	display: flex;
 	justify-content: center;
 	align-items: center;

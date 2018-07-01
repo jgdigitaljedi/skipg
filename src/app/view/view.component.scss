@@ -1,6 +1,8 @@
 @import '../../styles/_variables';
 .photos-view {
 	background-color: $primary;
+	background-image: url('../../assets/vichy.png');
+	background-repeat: repeat repeat;
 	padding: 1em;
 	text-align: center;
 	min-height: calc(100vh - 80px - 1em);
