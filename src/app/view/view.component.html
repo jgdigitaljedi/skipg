@@ -22,7 +22,7 @@
       <button mat-button class="red-button" (click)="getMorePhotos()">Load More Images</button>
     </div>
   </div>
-  <button mat-mini-fab class="scroll-top-btn red-button" (click)="scrollTop()">
+  <button class="scroll-top-btn red-button" (click)="scrollTop()" [class.scrolled]="scrolled">
     <mat-icon>arrow_upward</mat-icon>
   </button>
 </section>

@@ -37,10 +37,18 @@
 		bottom: 8px;
 		right: 0;
 		position: fixed;
-		// color: #fff;
 		font-weight: bold;
-		// background-color: $warn;
-		// width: 2em !important;
-		padding: 0 !important;
+		padding: .5em !important;
+		border: none;
+		border-radius: 5px 0 0 5px;
+		transition: all 1s ease-in-out;
+		opacity: 0;
+		transform: translateX(100%);
+		cursor: pointer;
+		&.scrolled {
+			opacity: 1;
+			transform: translateX(0);
+			transition: all .7s ease-in-out;
+		}
 	}
 }

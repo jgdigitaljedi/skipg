@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { CloudinaryService } from '../services/cloudinary.service';
 import { MatDialog } from '@angular/material';
 import { ImageDialogComponent } from '../widgets/image-dialog/image-dialog.component';
@@ -26,6 +26,13 @@ export class ViewComponent implements OnInit {
 		transitionDuration: '0.8s',
 		fitWidth: true
 	};
+	scrolled: boolean;
+
+	@HostListener('window:scroll', [ '$event' ])
+	onWindowScroll($event) {
+		console.log('scrolling...', window.scrollY);
+		this.scrolled = window.scrollY >= 120;
+	}
 
 	constructor(private _cloud: CloudinaryService, private _ga: GoogleAnalyticsService, public dialog: MatDialog) {
 		this.gridColumns = Math.floor(window.innerWidth / 300);
