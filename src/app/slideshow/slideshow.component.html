@@ -3,17 +3,18 @@
     <img [src]="currentImage" class="slide-image" *ngIf="currentImage" [@slideShow]="animation">
   </div>
   <div class="show-controls" color="warn">
-    <button mat-fab class="white-button" (click)="changeSlide('back')">
+    <button mat-fab class="white-button" (click)="changeSlide('back')" matTooltip="Show Previous Photo" aria-label="Show Previous Photo">
       <mat-icon>skip_previous</mat-icon>
     </button>
-    <button mat-fab class="white-button" (click)="isPaused ? startShow() : pauseShow()">
+    <button mat-fab class="white-button" (click)="isPaused ? startShow() : pauseShow()" [matTooltip]="isPaused ? 'Resume Slideshow' : 'Pause Slideshow'"
+      [attr.aria-label]="isPaused ? 'Resume Slideshow' : 'Pause Slideshow'">
       <mat-icon *ngIf="isPaused">play_arrow</mat-icon>
       <mat-icon *ngIf="!isPaused">pause</mat-icon>
     </button>
-    <button mat-fab class="white-button" (click)="changeSlide('next')">
+    <button mat-fab class="white-button" (click)="changeSlide('next')" matTooltip="Show Next Photo" aria-label="how Next Photo">
       <mat-icon>skip_next</mat-icon>
     </button>
-    <button mat-fab (click)="playPauseMusic()" class="red-button">
+    <button mat-fab (click)="playPauseMusic()" class="red-button" [matTooltip]="musicPaused ? 'Play Music' : 'Pause Music'" [attr.aria-label]="musicPaused ? 'Play Music' : 'Pause Music'">
       <mat-icon *ngIf="musicPaused">volume_up</mat-icon>
       <mat-icon *ngIf="!musicPaused">volume_off</mat-icon>
     </button>

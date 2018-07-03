@@ -3,13 +3,14 @@
     <form [formGroup]="firstForm" class="stepper-form">
       <ng-template matStepLabel>DISCLAIMER!</ng-template>
       <div class="stepper-contents" ngClass.gt-sm="half-width" ngClass.lt-md="full-width">
-        <div class="upload-disclaimer">I ask that you only upload photos of Skip/Maurice/Dad/Pop/Pere Pere, or whatever you called him. This is not your
-          Facebook or Instagram page and if you want to post pictures of yourself somewhere then that is the place to do
-          it. This site is only for photos in which Skip is pictured. Don't get me wrong, the more people in the picture
-          the merrier. Just know that I will delete any photos that do not have Skip in them.
+        <div class="upload-disclaimer">I want everyone to PLEASE upload as many photos of Skip/Maurice/Dad/Pop/Pere Pere, or whatever you called him! Let's
+          share what we have! That said, I ask that you only upload photos of him. This is not your Facebook or Instagram
+          page and if you want to post pictures of yourself somewhere then that is the place to do it. This site is only
+          for photos in which Skip is pictured. Don't get me wrong, the more people in the picture the merrier so if you're
+          in a photo with Skip then that's great! Just know that I will delete any photos that do not have Skip in them.
         </div>
-        <div class="name-text">To keep track of who uploaded which picture, enter you name <i>(this isn't hooked up yet but enter something to be able to move on; 
-          feature coming soon)</i>:</div>
+        <div class="name-text">To keep track of who uploaded which picture, enter you name
+          <i>(this isn't hooked up yet but enter something to be able to move on; feature coming soon)</i>:</div>
         <mat-form-field>
           <input matInput placeholder="Name" formControlName="firstCtrl" required>
         </mat-form-field>
@@ -40,8 +41,8 @@
             <mat-icon>arrow_back</mat-icon>
             Previous Step
           </button>
-          <button mat-button matStepperNext class="control-btn" [class.red-button]="passField.value === ffPass"
-            [disabled]="passField.value !== ffPass" [class.disabled-button]="passField.value !== ffPass">
+          <button mat-button matStepperNext class="control-btn" [class.red-button]="passField.value === ffPass" [disabled]="passField.value !== ffPass"
+            [class.disabled-button]="passField.value !== ffPass">
             Next Step
             <mat-icon>arrow_forward</mat-icon>
           </button>

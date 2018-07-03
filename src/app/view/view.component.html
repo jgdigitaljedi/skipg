@@ -3,7 +3,7 @@
   <div class="photos-masonry-wrapper">
     <ngx-masonry class="masonry-wrapper" [options]="options" [useImagesLoaded]="true">
       <ngxMasonryItem class="masonry-item" *ngFor="let photo of photos">
-        <mat-card (click)="openImageDialog(photo)">
+        <mat-card (click)="openImageDialog(photo)" matTooltip="Click to enlarge">
           <cl-image [public-id]="photo.public_id" class="photo-grid--tile--image">
             <cl-transformation width="300" crop="scale"></cl-transformation>
           </cl-image>
@@ -22,7 +22,8 @@
       <button mat-button class="red-button" (click)="getMorePhotos()">Load More Images</button>
     </div>
   </div>
-  <button class="scroll-top-btn red-button" (click)="scrollTop()" [class.scrolled]="scrolled">
+  <button class="scroll-top-btn red-button" (click)="scrollTop()" [class.scrolled]="scrolled" [attr.aria-hidden]="!scrolled"
+    matTooltip="Scroll to Top">
     <mat-icon>arrow_upward</mat-icon>
   </button>
 </section>

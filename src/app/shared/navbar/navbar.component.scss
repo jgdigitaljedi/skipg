@@ -13,13 +13,15 @@
 		font-weight: bold;
 		font-size: .6em;
 		font-family: $serif-font;
-		cursor: pointer;
+    cursor: pointer;
 		.inner-button {
-			transition: all .3s ease-in-out;
+      transform: translateY(0);
+			transition: all .4s ease-in-out;
 			display: flex;
 			align-items: center;
 			&:hover {
-				margin-bottom: .4em;
+				transform: translateY(-10%) scale(1.1);
+			  transition: all .4s ease-in-out;
 			}
 			mat-icon {
 				font-size: 1.2em;

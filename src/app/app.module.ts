@@ -17,7 +17,7 @@ import { NgxMasonryModule } from 'ngx-masonry';
 import { ShareButtonsModule } from '@ngx-share/buttons';
 
 export const cloudinary = {
-	Cloudinary: CloudinaryCore
+  Cloudinary: CloudinaryCore
 };
 export const config: CloudinaryConfiguration = cloudinaryConfiguration;
 
@@ -25,24 +25,24 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
-import { faCommentAlt } from '@fortawesome/free-solid-svg-icons/faCommentAlt';
-import { faMinus } from '@fortawesome/free-solid-svg-icons/faMinus';
-import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH';
+// import { faCommentAlt } from '@fortawesome/free-solid-svg-icons/faCommentAlt';
+// import { faMinus } from '@fortawesome/free-solid-svg-icons/faMinus';
+// import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH';
 import { faExclamation } from '@fortawesome/free-solid-svg-icons/faExclamation';
 import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
 import { faPinterestP } from '@fortawesome/free-brands-svg-icons/faPinterestP';
 import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons/faFacebookMessenger';
 
 const icons = [
-	faFacebookF,
-	faTwitter,
-	faCommentAlt,
-	faCheck,
-	faExclamation,
-	faEllipsisH,
-	faMinus,
-	faPinterestP,
-	faFacebookMessenger
+  faFacebookF,
+  faTwitter,
+  // faCommentAlt,
+  faCheck,
+  faExclamation,
+  // faEllipsisH,
+  // faMinus,
+  faPinterestP,
+  faFacebookMessenger
 ];
 
 library.add(...icons);
@@ -59,6 +59,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 // modules
 import { AppRoutingModule, routingComponents } from './app.routing';
@@ -75,36 +76,37 @@ import { environment } from '../environments/environment';
 import { GoogleAnalyticsService } from './services/google-analytics.service';
 
 @NgModule({
-	declarations: [ AppComponent, ImageDialogComponent, routingComponents, UploaderComponent ],
-	imports: [
-		AppRoutingModule,
-		BrowserAnimationsModule,
-		BrowserModule,
-		CloudinaryModule.forRoot(cloudinary, config),
-		FileUploadModule,
-		FlexLayoutModule,
-		FormsModule,
-		HttpClientModule,
-		InfiniteScrollModule,
-		MatButtonModule,
-		MatCardModule,
-		MatDialogModule,
-		MatFormFieldModule,
-		MatIconModule,
-		MatInputModule,
-		MatProgressBarModule,
-		MatProgressSpinnerModule,
-		MatSelectModule,
-		MatStepperModule,
-		MatToolbarModule,
-		NgxMasonryModule,
-		ReactiveFormsModule,
-		SharedModule,
-		ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-		ShareButtonsModule.forRoot()
-	],
-	providers: [ GoogleAnalyticsService ],
-	bootstrap: [ AppComponent ],
-	entryComponents: [ ImageDialogComponent ]
+  declarations: [AppComponent, ImageDialogComponent, routingComponents, UploaderComponent],
+  imports: [
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    CloudinaryModule.forRoot(cloudinary, config),
+    FileUploadModule,
+    FlexLayoutModule,
+    FormsModule,
+    HttpClientModule,
+    InfiniteScrollModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    MatStepperModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    NgxMasonryModule,
+    ReactiveFormsModule,
+    SharedModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    ShareButtonsModule.forRoot()
+  ],
+  providers: [GoogleAnalyticsService],
+  bootstrap: [AppComponent],
+  entryComponents: [ImageDialogComponent]
 })
-export class AppModule {}
+export class AppModule { }

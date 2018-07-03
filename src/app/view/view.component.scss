@@ -16,8 +16,9 @@
 			flex-direction: column;
 			.masonry-item {
 				margin: 0 auto;
-				width: 350px;
+				width: calc(300px + 2em);
 				mat-card {
+          padding: 1em;
 					margin-bottom: .75em;
 					cursor: pointer;
 					.photo-grid--tile--image {
@@ -43,7 +44,8 @@
 		border-radius: 5px 0 0 5px;
 		transition: all 1s ease-in-out;
 		opacity: 0;
-		transform: translateX(100%);
+    transform: translateX(100%);
+    outline: none;
 		cursor: pointer;
 		&.scrolled {
 			opacity: 1;
