@@ -31,16 +31,16 @@
 			color: $flat-white;
 			justify-content: center;
 			a {
-        color: $flat-white;
-        text-decoration: none;
-        transition: all .3s ease-out;
+				color: $flat-white;
+				text-decoration: none;
+				transition: all .3s ease-out;
 				&:visited {
 					color: lighten($primary, 35%);
 				}
 				&:hover {
-          color: $warn;
-          text-decoration: underline;
-          // text-transform: uppercase;
+					color: $warn;
+					text-decoration: underline;
+					// text-transform: uppercase;
 				}
 			}
 			.divider {

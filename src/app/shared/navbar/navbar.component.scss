@@ -11,23 +11,24 @@
 		display: flex;
 		align-items: flex-end;
 		font-weight: bold;
-		font-size: .6em;
+		font-size: .75em;
 		font-family: $serif-font;
-    cursor: pointer;
+		cursor: pointer;
 		.inner-button {
-      transform: translateY(0);
+			transform: translateY(0);
 			transition: all .4s ease-in-out;
 			display: flex;
 			align-items: center;
 			&:hover {
 				transform: translateY(-10%) scale(1.1);
-			  transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
 			}
 			mat-icon {
-				font-size: 1.2em;
-				width: 1.2em;
-				height: 1.2em;
-				margin-right: .1em;
+				font-size: 1em;
+				// width: 1.2em;
+				// height: 1.2em;
+				// margin-right: .1em;
+				margin-top: .5em;
 			}
 		}
 	}
