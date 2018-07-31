@@ -2,14 +2,17 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 // lib
 import { Cloudinary as CloudinaryCore } from 'cloudinary-core';
-import { CloudinaryConfiguration, CloudinaryModule, provideCloudinary } from '@cloudinary/angular-5.x';
+import {
+  CloudinaryConfiguration,
+  CloudinaryModule,
+  provideCloudinary
+} from '@cloudinary/angular-5.x';
 import cloudinaryConfiguration from './config';
-import { Cloudinary } from '@cloudinary/angular-5.x/src/cloudinary.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FileUploadModule } from 'ng2-file-upload';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
@@ -25,25 +28,12 @@ export const config: CloudinaryConfiguration = cloudinaryConfiguration;
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
-// import { faCommentAlt } from '@fortawesome/free-solid-svg-icons/faCommentAlt';
-// import { faMinus } from '@fortawesome/free-solid-svg-icons/faMinus';
-// import { faEllipsisH } from '@fortawesome/free-solid-svg-icons/faEllipsisH';
 import { faExclamation } from '@fortawesome/free-solid-svg-icons/faExclamation';
 import { faCheck } from '@fortawesome/free-solid-svg-icons/faCheck';
 import { faPinterestP } from '@fortawesome/free-brands-svg-icons/faPinterestP';
 import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons/faFacebookMessenger';
 
-const icons = [
-  faFacebookF,
-  faTwitter,
-  // faCommentAlt,
-  faCheck,
-  faExclamation,
-  // faEllipsisH,
-  // faMinus,
-  faPinterestP,
-  faFacebookMessenger
-];
+const icons = [faFacebookF, faTwitter, faCheck, faExclamation, faPinterestP, faFacebookMessenger];
 
 library.add(...icons);
 
@@ -74,6 +64,8 @@ import { environment } from '../environments/environment';
 
 // services
 import { GoogleAnalyticsService } from './services/google-analytics.service';
+import { HttpService } from './services/http.service';
+import { TokenInterceptor } from './services/interceptor.class';
 
 @NgModule({
   declarations: [AppComponent, ImageDialogComponent, routingComponents, UploaderComponent],
@@ -105,8 +97,16 @@ import { GoogleAnalyticsService } from './services/google-analytics.service';
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     ShareButtonsModule.forRoot()
   ],
-  providers: [GoogleAnalyticsService],
+  providers: [
+    GoogleAnalyticsService,
+    HttpService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
   entryComponents: [ImageDialogComponent]
 })
-export class AppModule { }
+export class AppModule {}
