@@ -7,8 +7,14 @@
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://skipg.me/home</loc>
+    <loc>https://skipg.me/skip</loc>
     <lastmod>2018-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://skipg.me/shirley</loc>
+    <lastmod>2020-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
@@ -29,11 +35,5 @@
     <lastmod>2018-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://skipg.me/info</loc>
-    <lastmod>2018-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>
