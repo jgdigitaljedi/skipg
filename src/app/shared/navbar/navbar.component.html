@@ -1,5 +1,5 @@
 <mat-toolbar fxHide.lt-md="true" fxShow.gt-sm="true" fxFlex="100" fxLayout="row" color="primary">
-  <span class="skip-title">Skip & Shirley</span>
+  <span class="skip-title">Skip & Shirley Gauthier</span>
   <div class="nav-buttons">
     <div [class.active]="activeRoute === '/skip'" (click)="navNext('/skip')" class="nav-btn">
       <div class="inner-button">
@@ -42,7 +42,7 @@
 <mat-toolbar class="mobile-toolbar" fxHide.gt-sm="true" fxShow.lt-md="true" color="primary" fxFlex="100" fxLayout="row">
   <button mat-button class="nav-menu-toggle" [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
-    <span class="skip-title-mobile">Skip Gauthier</span>
+    <span class="skip-title-mobile">Skip & Shirley</span>
   </button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item [class.active]="activeRoute === '/skip'" (click)="navNext('/skip')" class="mobile-btn">Skip</button>
