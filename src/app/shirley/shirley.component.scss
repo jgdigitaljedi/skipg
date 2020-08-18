@@ -1,0 +1,80 @@
+@import '../../styles/_variables';
+.home-wrapper {
+	background-color: $primary;
+	height: calc(100vh - 64px - 4em);
+	padding: 2em;
+	&.mobile-wrapper {
+		min-height: calc(100vh - 56px - 1em);
+		height: auto;
+		padding: .5em;
+	}
+	.home-inner {
+		border: 1px solid $flat-white;
+		height: calc(100vh - 36px - 8em);
+		padding: 1em;
+		display: flex;
+		&.mobile-inner {
+			height: auto;
+		}
+		.home-inner--info,
+		.home-inner--photos {
+			width: 50%;
+			&.home-inner--child-mobile {
+				width: 100%;
+				height: 50%;
+			}
+		}
+		.home-inner--info {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			color: $flat-white;
+			justify-content: center;
+			a {
+				color: $flat-white;
+				text-decoration: none;
+				transition: all .3s ease-out;
+				&:visited {
+					color: lighten($primary, 35%);
+				}
+				&:hover {
+					color: $warn;
+					text-decoration: underline;
+					// text-transform: uppercase;
+				}
+			}
+			.divider {
+				width: 12%;
+				min-width: 80px;
+			}
+			.home-inner--info--life,
+			.home-inner--info--obit,
+			.home-inner--info--links {
+				text-align: center;
+				margin-bottom: 1.5em;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				// border-bottom: 1px solid $flat-white;
+			}
+			.home-inner--info--obit,
+			.home-inner--info--links {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		.home-inner--photos {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				width: auto;
+				height: auto;
+				object-fit: cover;
+			}
+		}
+	}
+}

@@ -1,10 +1,16 @@
 <mat-toolbar fxHide.lt-md="true" fxShow.gt-sm="true" fxFlex="100" fxLayout="row" color="primary">
-  <span class="skip-title">Skip Gauthier</span>
+  <span class="skip-title">Skip & Shirley</span>
   <div class="nav-buttons">
-    <div [class.active]="activeRoute === '/home'" (click)="navNext('/home')" class="nav-btn">
+    <div [class.active]="activeRoute === '/skip'" (click)="navNext('/skip')" class="nav-btn">
       <div class="inner-button">
-        <mat-icon>home</mat-icon>
-        <span class="nav-text">Home</span>
+        <mat-icon>military_tech</mat-icon>
+        <span class="nav-text">Skip</span>
+      </div>
+    </div>
+    <div [class.active]="activeRoute === '/shirley'" (click)="navNext('/shirley')" class="nav-btn">
+      <div class="inner-button">
+        <mat-icon>favorite</mat-icon>
+        <span class="nav-text">Shirley</span>
       </div>
     </div>
     <div [class.active]="activeRoute === '/slideshow'" (click)="navNext('/slideshow')" class="nav-btn">
@@ -25,11 +31,11 @@
         <span class="nav-text">View Photos</span>
       </div>
     </div>
-    <div [class.active]="activeRoute === '/info'" (click)="navNext('/info')" class="nav-btn info-button">
+    <!-- <div [class.active]="activeRoute === '/info'" (click)="navNext('/info')" class="nav-btn info-button">
       <div class="inner-button">
         <mat-icon>info</mat-icon>
       </div>
-    </div>
+    </div> -->
   </div>
 </mat-toolbar>
 
