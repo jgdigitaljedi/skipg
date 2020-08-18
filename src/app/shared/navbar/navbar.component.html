@@ -45,10 +45,10 @@
     <span class="skip-title-mobile">Skip Gauthier</span>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item [class.active]="activeRoute === '/home'" (click)="navNext('/home')" class="mobile-btn">Home</button>
+    <button mat-menu-item [class.active]="activeRoute === '/skip'" (click)="navNext('/skip')" class="mobile-btn">Skip</button>
+    <button mat-menu-item [class.active]="activeRoute === '/shirley'" (click)="navNext('/shirley')" class="mobile-btn">Shirley</button>
     <button mat-menu-item [class.active]="activeRoute === '/slideshow'" (click)="navNext('/slideshow')" class="mobile-btn">Slideshow</button>
     <button mat-menu-item [class.active]="activeRoute === '/upload'" (click)="navNext('/upload')" class="mobile-btn">Upload Photos</button>
     <button mat-menu-item [class.active]="activeRoute === '/view'" (click)="navNext('/view')" class="mobile-btn">View Photos</button>
-    <button mat-menu-item [class.active]="activeRoute === '/info'" (click)="navNext('/info')" class="mobile-btn">Info</button>
   </mat-menu>
 </mat-toolbar>
