@@ -1,4 +1,4 @@
-<mat-toolbar fxHide.lt-md="true" fxShow.gt-sm="true" fxFlex="100" fxLayout="row" color="primary">
+<mat-toolbar fxHide.lt-md="true" fxShow.gt-sm="true" fxFlex="100" fxLayout="row" color="primary" [ngClass]="{'shirley': isShirley}">
   <span class="skip-title">Skip & Shirley Gauthier</span>
   <div class="nav-buttons">
     <div [class.active]="activeRoute === '/skip'" (click)="navNext('/skip')" class="nav-btn">

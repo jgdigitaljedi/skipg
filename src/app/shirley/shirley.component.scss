@@ -1,11 +1,10 @@
 @import '../../styles/_variables';
-.home-wrapper {
-	background-color: $primary;
+.shirley-wrapper {
 	height: calc(100vh - 64px - 4em);
   padding: 2em;
-  background-color: $primary;
-	background-image: url('../../assets/vichy.png');
-	background-repeat: repeat repeat;
+  background-color: $yellow;
+	// background-image: url('../../assets/flowers.png');
+	// background-repeat: repeat repeat;
 	&.mobile-wrapper {
 		min-height: calc(100vh - 56px - 1em);
 		height: auto;
@@ -16,7 +15,9 @@
 		height: calc(100vh - 36px - 8em);
 		padding: 1em;
     display: flex;
-    background-color: $primary;
+    background-color: darken($pink, 10%);
+    background-image: url('../../assets/flowers.png');
+	  background-repeat: repeat repeat;
 		&.mobile-inner {
 			height: auto;
 		}
@@ -33,17 +34,24 @@
 			flex-direction: column;
 			align-items: center;
 			color: $flat-white;
-			justify-content: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      h1 {
+        font-size: 3rem;
+        font-family: $hand-font;
+        font-weight: normal;
+      }
 			a {
 				color: $flat-white;
 				text-decoration: none;
 				transition: all .3s ease-out;
 				&:visited {
-					color: lighten($primary, 35%);
+					color: darken($pink, 35%);
 				}
 				&:hover {
-					color: $warn;
+          color: $warn;
 					text-decoration: underline;
+          color: darken($yellow, 35%);
 					// text-transform: uppercase;
 				}
 			}

@@ -75,3 +75,10 @@
 ::ng-deep .mat-button:hover {
 	background-color: transparent !important;
 }
+
+.shirley {
+	background-color: $yellow;
+	.active {
+		color: darken($pink, 10%);
+	}
+}
