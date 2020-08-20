@@ -11,7 +11,7 @@ import { ViewComponent } from "./view/view.component";
 import { ShirleyComponent } from "./shirley/shirley.component";
 
 const routes: Routes = [
-  { path: "", pathMatch: "full", redirectTo: "skip" },
+  { path: "", pathMatch: "full", redirectTo: "/skip" },
   // { path: 'home', pathMatch: 'full', component: HomeComponent },
   { path: "skip", pathMatch: "full", component: HomeComponent },
   { path: "shirley", pathMatch: "full", component: ShirleyComponent },

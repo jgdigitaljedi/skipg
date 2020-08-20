@@ -14,9 +14,9 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this._route.events.subscribe((val: RouterEvent) => {
-      console.log("val", val);
-      this.activeRoute = val.url;
-      this.isShirley = val.url === "/shirley";
+      const value = val.url === "/" ? "/skip" : val.url;
+      this.activeRoute = value;
+      this.isShirley = value === "/shirley";
     });
   }
 

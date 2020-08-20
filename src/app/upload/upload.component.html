@@ -1,5 +1,5 @@
 <mat-vertical-stepper class="upload-stepper" [linear]="true" #stepper>
-  <mat-step [stepControl]="firstForm" class="stepper">
+  <!-- <mat-step [stepControl]="firstForm" class="stepper">
     <form [formGroup]="firstForm" class="stepper-form">
       <ng-template matStepLabel>DISCLAIMER!</ng-template>
       <div class="stepper-contents" ngClass.gt-sm="half-width" ngClass.lt-md="full-width">
@@ -23,15 +23,18 @@
         </div>
       </div>
     </form>
-  </mat-step>
+  </mat-step> -->
   <mat-step [stepControl]="passForm" class="stepper">
     <form [formGroup]="passForm" class="stepper-form">
       <ng-template matStepLabel>Enter Family & Friends Password</ng-template>
       <div class="stepper-contents" ngClass.gt-sm="half-width" ngClass.lt-md="full-width">
         <div class="password-instructions">
+          This upload feature is password protected as a hurdle to stop spammers and people that abuse the site.<br><br>
+
           Enter the password that is shared with family and friends. If you don't know this password and are family or a close friend
-          that has some photos to upload then ask Paul or Joey for the password. This is just a small step to deter any random
-          person from uploading whatever they want.<br/><br/>Password will be changed if someone is abusing the site.
+          that has some photos to upload then ask Paul or Joey for the password.
+          <br><br>
+          Password will be changed if someone is abusing the site. Pictures will be taken down if they don't feature Skip or Shirley.
         </div>
         <div class="password-note">NOTE: The 'Next Step' button will remain disabled until you type the correct password.</div>
         <mat-form-field>
